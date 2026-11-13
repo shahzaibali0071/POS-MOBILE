@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ALI MOBILE</title>
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<meta name="description" content="Mobile accessories, chargers, cables, handsfree, phones and repairs. Order on WhatsApp.">
+<meta name="theme-color" content="#0b1220">
+<style>
+:root{--ink:#0b1220;--ink2:#1e293b;--muted:#64748b;--line:#e5e7eb;--bg:#f5f6f8;--card:#fff;
+  --accent:#ff6a13;--accent2:#ffb020;--wa:#16a34a;--r:16px;--max:1200px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:180px}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button{font:inherit;cursor:pointer}
+img{display:block}
+.wrap{max-width:var(--max);margin-left:auto;margin-right:auto;padding:0 16px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* top strip + header */
+.strip{background:var(--accent);color:#fff;font-size:13px;font-weight:600}
+.strip .wrap{display:flex;gap:18px;justify-content:safe center;padding:7px 16px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+header.top{position:sticky;top:0;z-index:20;background:var(--ink);color:#fff;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+.hrow{display:flex;align-items:center;gap:14px;padding:12px 16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex:none}
+.mark{width:40px;height:40px;display:block}
+.logo b{font-size:19px;letter-spacing:.3px}
+.search{flex:1;position:relative}
+.search input{width:100%;padding:11px 14px 11px 40px;font-size:15px;border:0;border-radius:12px;background:#1f2a3c;color:#fff}
+.search input::placeholder{color:#94a3b8}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);opacity:.7}
+.cartbtn{position:relative;flex:none;margin-left:auto;border:0;background:#1f2a3c;color:#fff;border-radius:12px;padding:10px 14px;display:flex;gap:8px;align-items:center;font-weight:700}
+.badge{position:absolute;top:-6px;right:-6px;min-width:20px;height:20px;border-radius:10px;background:var(--accent);color:#fff;font-size:12px;display:grid;place-items:center;padding:0 5px}
+.badge[hidden]{display:none}
+nav.cats{border-top:1px solid #1f2a3c}
+nav.cats .wrap{display:flex;gap:6px;overflow-x:auto;padding:8px 16px;scrollbar-width:none}
+nav.cats button{flex:none;border:0;background:none;color:#cbd5e1;padding:7px 12px;border-radius:999px;font-size:14px;font-weight:600}
+nav.cats button:hover,nav.cats button.on{background:#fff;color:var(--ink)}
+@media (max-width:640px){.hrow{flex-wrap:wrap}.search{order:3;flex-basis:100%}.logo b{font-size:17px}.cartbtn span.t{display:none}}
+
+/* hero */
+.hero{margin:18px auto 0;display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+.hcopy{border-radius:24px;padding:38px 34px;color:#fff;background:radial-gradient(circle at 85% 15%,rgba(255,176,32,.45),transparent 45%),linear-gradient(135deg,#0b1220 0%,#1e293b 60%,#3b1d0a 100%);display:flex;flex-direction:column;justify-content:center;min-height:320px}
+.kicker{display:inline-block;background:rgba(255,255,255,.12);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:700;width:max-content}
+.hcopy h1{font-size:40px;line-height:1.08;margin:14px 0 10px;letter-spacing:-.5px}
+.hcopy h1 em{font-style:normal;color:var(--accent2)}
+.hcopy p{color:#cbd5e1;margin:0 0 22px;font-size:16px;max-width:460px}
+.ctas{display:flex;gap:10px;flex-wrap:wrap}
+.btn{border:0;border-radius:12px;padding:13px 20px;font-weight:800;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;justify-content:center}
+.btn.main{background:var(--accent);color:#fff}
+.btn.wa{background:var(--wa);color:#fff}
+.btn.ghost{background:rgba(255,255,255,.12);color:#fff}
+.btn.dark{background:var(--ink);color:#fff}
+.btn.line{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+.slider{position:relative;border-radius:24px;background:#fff;overflow:hidden;min-height:320px;border:1px solid var(--line)}
+.slide{position:absolute;inset:0;display:grid;grid-template-rows:1fr auto;opacity:0;transition:opacity .6s;text-decoration:none;cursor:pointer}
+.slide.on{opacity:1;z-index:1}
+.slide img{width:100%;height:100%;object-fit:contain;padding:22px 22px 0;min-height:0}
+.slide .cap{padding:12px 20px 34px;display:flex;justify-content:space-between;align-items:end;gap:10px}
+.slide .cap b{font-size:16px;line-height:1.25}
+.slide .cap span{font-weight:900;font-size:18px;white-space:nowrap;color:var(--accent)}
+.slide .ribbon{position:absolute;top:16px;left:16px;background:var(--ink);color:#fff;font-size:12px;font-weight:800;border-radius:8px;padding:5px 10px}
+.dots{position:absolute;bottom:12px;left:0;right:0;display:flex;justify-content:center;gap:6px;z-index:2}
+.dots button{width:8px;height:8px;border-radius:4px;border:0;padding:0;background:#cbd5e1;transition:width .3s}
+.dots button.on{width:22px;background:var(--accent)}
+@media (max-width:820px){.hero{grid-template-columns:1fr}.hcopy{min-height:0;padding:28px 22px}.hcopy h1{font-size:30px}.slider{min-height:300px}}
+
+/* trust */
+.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px auto 0}
+.trust div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:14px;display:flex;gap:12px;align-items:center}
+.trust i{font-style:normal;font-size:22px;width:42px;height:42px;border-radius:12px;background:#fff4ec;display:grid;place-items:center;flex:none}
+.trust b{display:block;font-size:14px}
+.trust small{color:var(--muted);font-size:12.5px}
+@media (max-width:820px){.trust{grid-template-columns:1fr 1fr}}
+
+/* sections */
+section{margin:38px auto 0}
+.shead{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:14px}
+.shead h2{margin:0;font-size:24px;letter-spacing:-.3px}
+.shead p{margin:4px 0 0;color:var(--muted);font-size:14px}
+.link{border:0;background:none;color:var(--accent);font-weight:800;font-size:14px;white-space:nowrap;padding:6px 0}
+
+/* category tiles */
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px}
+.tile{border:1px solid var(--line);background:#fff;border-radius:var(--r);padding:12px;text-align:center;transition:transform .15s,box-shadow .15s}
+.tile:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(15,23,42,.08)}
+.tile img{width:100%;aspect-ratio:1;object-fit:contain;border-radius:12px;background:#fafafa}
+.tile b{display:block;margin-top:8px;font-size:14px}
+.tile small{color:var(--muted)}
+@media (max-width:640px){.tiles{grid-auto-flow:column;grid-auto-columns:112px;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px}.tile{scroll-snap-align:start;padding:8px}.add{font-size:12.5px;white-space:nowrap;padding:10px 4px}}
+
+/* product rows + cards */
+.rowwrap{position:relative}
+.row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(200px,230px);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 12px;scrollbar-width:thin}
+.row>*{scroll-snap-align:start}
+.arrow{position:absolute;top:38%;z-index:2;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#fff;box-shadow:0 4px 14px rgba(0,0,0,.12);font-size:20px;font-weight:700;color:var(--ink)}
+.arrow.l{left:-14px}.arrow.r{right:-14px}
+@media (hover:none),(max-width:640px){.arrow{display:none}.row{grid-auto-columns:minmax(160px,46%)}}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+@media (max-width:640px){.grid{grid-template-columns:1fr 1fr;gap:10px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:box-shadow .15s,transform .15s}
+.card:hover{box-shadow:0 12px 28px rgba(15,23,42,.10);transform:translateY(-2px)}
+.ph{position:relative;aspect-ratio:1;background:#fff;border:0;padding:0;width:100%}
+.ph img{width:100%;height:100%;object-fit:contain;padding:10px;transition:transform .3s}
+.card:hover .ph img{transform:scale(1.04)}
+.tags{position:absolute;top:10px;left:10px;display:flex;flex-direction:column;gap:5px;align-items:flex-start}
+.tag{font-size:11px;font-weight:800;border-radius:7px;padding:3px 8px;color:#fff;background:var(--ink)}
+.tag.best{background:var(--accent)}.tag.new{background:#2563eb}.tag.used{background:#b45309}
+.info{padding:10px 12px 12px;display:flex;flex-direction:column;gap:3px;flex:1;border-top:1px solid #f1f5f9}
+.cat{color:var(--muted);font-size:11.5px;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+.name{font-weight:700;font-size:14.5px;line-height:1.3;border:0;background:none;padding:0;text-align:left;color:var(--ink);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sub{color:var(--muted);font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.price{font-weight:900;font-size:18px;margin-top:auto;padding-top:6px}
+.acts{display:grid;grid-template-columns:1fr auto;gap:6px;margin-top:8px}
+.add{border:0;border-radius:10px;padding:10px 8px;background:var(--ink);color:#fff;font-weight:800;font-size:13.5px}
+.add.done{background:var(--wa)}
+.quick{border:0;border-radius:10px;width:40px;background:#dcfce7;color:var(--wa);font-weight:900;display:grid;place-items:center;text-decoration:none}
+
+/* shop all */
+.tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;flex:1;min-width:0}
+.chip{flex:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:600;color:var(--ink)}
+.chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+select{font:inherit;font-size:14px;padding:8px 10px;border-radius:10px;border:1px solid var(--line);background:#fff}
+.count{color:var(--muted);font-size:13px;margin:0 0 10px}
+.empty{grid-column:1/-1;color:var(--muted);text-align:center;padding:40px 0}
+.more{display:flex;justify-content:center;margin-top:18px}
+
+/* why + faq + cta */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;counter-reset:w}
+.why div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.why div::before{counter-increment:w;content:"0" counter(w);font-weight:900;font-size:26px;color:var(--accent)}
+.why b{display:block;margin:8px 0 6px}
+.why p{margin:0;color:var(--muted);font-size:14px;line-height:1.5}
+@media (max-width:820px){.why{grid-template-columns:1fr 1fr}}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:10px;padding:0 18px}
+.faq summary{cursor:pointer;font-weight:700;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:10px}
+.faq summary::after{content:"+";font-size:20px;color:var(--accent)}
+.faq details[open] summary::after{content:"\2212"}
+.faq p{margin:0 0 16px;color:var(--ink2);line-height:1.55}
+.cta{border-radius:24px;padding:34px 28px;background:linear-gradient(120deg,var(--accent),var(--accent2));color:#fff;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.cta h2{margin:0 0 6px;font-size:26px}
+.cta p{margin:0;opacity:.95}
+
+/* footer */
+footer{background:var(--ink);color:#cbd5e1;margin-top:48px;padding:40px 0 90px;font-size:14px}
+.fcols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:26px}
+footer h3{color:#fff;font-size:15px;margin:0 0 12px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+footer button,footer a{border:0;background:none;color:#cbd5e1;padding:0;text-decoration:none;font-size:14px;text-align:left}
+footer button:hover,footer a:hover{color:#fff}
+.fbrand p{margin:12px 0 0;line-height:1.55}
+.legal{border-top:1px solid #1f2a3c;margin-top:28px;padding-top:16px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:12.5px;color:#94a3b8}
+@media (max-width:820px){.fcols{grid-template-columns:1fr 1fr}}
+
+/* dialogs */
+dialog{border:0;padding:0;color:var(--ink)}
+dialog::backdrop{background:rgba(11,18,32,.55)}
+.pd{width:min(920px,94vw);border-radius:22px;max-height:92vh}
+.pdin{display:grid;grid-template-columns:1fr 1fr}
+.pdimg{background:#fff;display:grid;place-items:center;padding:20px;border-right:1px solid var(--line)}
+.pdimg img{width:100%;max-height:70vh;object-fit:contain}
+.pdtxt{padding:26px 26px 22px;display:flex;flex-direction:column;gap:10px;overflow:auto}
+.pdtxt h2{margin:0;font-size:24px;line-height:1.2}
+.pdtxt .price{font-size:28px;padding:0;margin:0;color:var(--accent)}
+.specs{margin:0;padding:0;list-style:none;display:grid;gap:6px}
+.specs li{background:var(--bg);border-radius:10px;padding:8px 12px;font-size:14px}
+.qty{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:12px;overflow:hidden;width:max-content}
+.qty button{border:0;background:#fff;width:40px;height:40px;font-size:18px;font-weight:800}
+.qty output{min-width:36px;text-align:center;font-weight:800}
+.pdacts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:auto}
+.note{color:var(--muted);font-size:12.5px;margin:0}
+.x{position:absolute;top:12px;right:12px;width:38px;height:38px;border-radius:50%;border:0;background:var(--bg);font-size:20px;z-index:3}
+@media (max-width:700px){.pdin{grid-template-columns:1fr}.pdimg{border-right:0;border-bottom:1px solid var(--line)}.pdimg img{max-height:42vh}.pdtxt{padding:20px}}
+.drawer{margin:0 0 0 auto;height:100dvh;max-height:100dvh;width:min(420px,100vw);display:flex;flex-direction:column}
+.drawer:not([open]){display:none}
+.dhead{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--line)}
+.dhead h2{margin:0;font-size:20px}
+.dhead .x{position:static}
+.lines{flex:1;overflow:auto;padding:8px 20px}
+.line{display:grid;grid-template-columns:64px 1fr auto;gap:12px;padding:12px 0;border-bottom:1px solid #f1f5f9;align-items:center}
+.line img{width:64px;height:64px;object-fit:contain;border:1px solid var(--line);border-radius:10px;background:#fff}
+.line>div:nth-child(2){display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:0}
+.line b{font-size:14px;display:block;line-height:1.3}
+.line small{color:var(--muted)}
+.line .qty button{width:32px;height:32px;font-size:16px}
+.line .qty output{min-width:28px}
+.rm{border:0;background:none;color:var(--muted);font-size:12.5px;text-decoration:underline;padding:4px 0}
+.dfoot{border-top:1px solid var(--line);padding:16px 20px 20px;display:grid;gap:10px}
+.total{display:flex;justify-content:space-between;font-size:18px;font-weight:900}
+.dfoot input,.dfoot textarea{font:inherit;font-size:15px;width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px}
+.dempty{text-align:center;color:var(--muted);padding:50px 10px}
+
+.float{position:fixed;right:16px;bottom:16px;z-index:15;background:var(--wa);color:#fff;text-decoration:none;font-weight:800;border-radius:999px;padding:14px 18px;box-shadow:0 8px 24px rgba(0,0,0,.25);display:flex;gap:8px;align-items:center}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,40px);opacity:0;background:var(--ink);color:#fff;border-radius:12px;padding:12px 18px;font-weight:700;z-index:30;transition:all .25s;pointer-events:none}
+.toast.on{transform:translate(-50%,0);opacity:1}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style></head>
+<body>
+<a class="sr" href="#shop">Skip to products</a>
+<div class="strip"><div class="wrap" id="strip"></div></div>
+<header class="top">
+  <div class="wrap hrow">
+    <a class="logo" href="#" id="logo"><img class="mark" src="logo.svg" alt=""><b id="shopname"></b></a>
+    <label class="search"><span class="sr">Search products</span>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search chargers, cables, handsfree, phones..." autocomplete="off"></label>
+    <button class="cartbtn" id="cartbtn" type="button" aria-label="Open cart">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+      <span class="t">Cart</span><span class="badge" id="badge" hidden>0</span></button>
+  </div>
+  <nav class="cats" aria-label="Categories"><div class="wrap" id="navcats"></div></nav>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <div class="hcopy">
+      <span class="kicker" id="kicker"></span>
+      <h1>Accessories, phones &amp; <em>repairs</em> you can trust</h1>
+      <p id="herop"></p>
+      <div class="ctas"><a class="btn main" href="#shop">Shop now</a><a class="btn ghost" id="herowa" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+    </div>
+    <div class="slider" id="slider" aria-roledescription="carousel" aria-label="Best sellers"><div class="dots" id="dots"></div></div>
+  </div>
+
+  <div class="wrap trust">
+    <div><i aria-hidden="true">&#128247;</i><span><b>Real photos</b><small>Of the stock we actually have</small></span></div>
+    <div><i aria-hidden="true">&#127991;</i><span><b>Shop prices</b><small>Same price online and in store</small></span></div>
+    <div><i aria-hidden="true">&#128295;</i><span><b>Repairs</b><small>Screens, batteries, charging</small></span></div>
+    <div><i aria-hidden="true">&#128172;</i><span><b>Easy ordering</b><small>Send your cart on WhatsApp</small></span></div>
+  </div>
+
+  <section class="wrap" id="catsec"><div class="shead"><div><h2>Shop by category</h2><p>Everything for your phone, in one place</p></div></div><div class="tiles" id="tiles"></div></section>
+  <div id="rows"></div>
+
+  <section class="wrap" id="shop">
+    <div class="shead"><div><h2>Shop all</h2><p id="count" class="count" style="margin:4px 0 0"></p></div>
+      <label><span class="sr">Sort</span><select id="sort"><option value="pop">Most popular</option><option value="new">Newest</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option></select></label></div>
+    <div class="tools"><div class="chips" id="chips" aria-label="Filter by category"></div></div>
+    <div class="grid" id="grid"></div>
+    <div class="more"><button class="btn line" id="more" type="button">Show more</button></div>
+  </section>
+
+  <section class="wrap" id="why"><div class="shead"><div><h2 id="whyh"></h2></div></div>
+    <div class="why">
+      <div><b>What you see is in stock</b><p>This list is made straight from our shop's stock, so items here are on our shelves.</p></div>
+      <div><b>Fair, clear prices</b><p>No hidden extras. The price on the card is the price at the counter.</p></div>
+      <div><b>Repairs under one roof</b><p>Broken screen, weak battery or charging fault? Bring it in and we will check it.</p></div>
+      <div><b>Real people on WhatsApp</b><p>Ask anything before you buy. We reply with photos and availability.</p></div>
+    </div></section>
+
+  <section class="wrap faq" id="faq"><div class="shead"><div><h2>Questions</h2></div></div>
+    <details><summary>How do I order?</summary><p>Add items to your cart and tap "Send order on WhatsApp". Your list arrives in our chat and we confirm it with you.</p></details>
+    <details><summary>Is everything on this page in stock?</summary><p>The list comes from our stock on the date at the bottom of the page. Stock moves daily, so we confirm every order on WhatsApp first.</p></details>
+    <details><summary>Where is the shop?</summary><p id="faqwhere"></p></details>
+    <details><summary>Do you repair phones?</summary><p>Yes. Screens, batteries, charging ports, speakers and more. Message us the model and fault for a price.</p></details>
+    <details><summary>Can I ask for an item that is not listed?</summary><p>Yes. Send us the name or a photo on WhatsApp and we will arrange it for you.</p></details>
+  </section>
+
+  <section class="wrap"><div class="cta"><div><h2>Can't find what you need?</h2><p>Send us a photo of the item and we will find it for you.</p></div><a class="btn dark" id="ctawa" target="_blank" rel="noopener">Message us</a></div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="fcols">
+    <div class="fbrand"><a class="logo" href="#"><img class="mark" src="logo.svg" alt=""><b id="fname" style="color:#fff"></b></a><p>Mobile accessories, phones and repairs. Visit the shop or order on WhatsApp.</p></div>
+    <div><h3>Shop</h3><ul id="fcats"></ul></div>
+    <div><h3>Help</h3><ul><li><a href="#faq">How to order</a></li><li><a href="#faq">Questions</a></li><li><a href="#why">Why us</a></li><li><button type="button" id="fcart">Your cart</button></li></ul></div>
+    <div><h3>Visit us</h3><ul id="fcontact"></ul></div>
+  </div>
+  <div class="legal"><span id="copy"></span><span id="updated"></span></div>
+</div></footer>
+
+<a class="float" id="float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">&#128172; <span>WhatsApp</span></a>
+
+<dialog class="pd" id="pd" aria-labelledby="pdname"><button class="x" type="button" data-close aria-label="Close">&times;</button><div class="pdin">
+  <div class="pdimg"><img id="pdimg" alt=""></div>
+  <div class="pdtxt"><div class="tags" id="pdtags" style="position:static;flex-direction:row"></div>
+    <span class="cat" id="pdcat"></span><h2 id="pdname"></h2><span class="sub" id="pdsub" style="white-space:normal"></span>
+    <p class="price" id="pdprice"></p><ul class="specs" id="pdspecs"></ul>
+    <div class="qty" aria-label="Quantity"><button type="button" id="pdminus" aria-label="Less">&minus;</button><output id="pdqty">1</output><button type="button" id="pdplus" aria-label="More">+</button></div>
+    <div class="pdacts"><button class="btn dark" type="button" id="pdadd">Add to cart</button><a class="btn wa" id="pdwa" target="_blank" rel="noopener">Order now</a></div>
+    <button class="link" type="button" id="pdshare" style="text-align:left">Share this item</button>
+    <p class="note">Stock changes daily. We confirm availability on WhatsApp.</p></div></div></dialog>
+
+<dialog class="drawer" id="cart" aria-labelledby="carth">
+  <div class="dhead"><h2 id="carth">Your cart</h2><button class="x" type="button" data-close aria-label="Close">&times;</button></div>
+  <div class="lines" id="lines"></div>
+  <div class="dfoot" id="dfoot">
+    <div class="total"><span>Total</span><span id="total"></span></div>
+    <label><span class="sr">Your name</span><input id="cname" placeholder="Your name (optional)" maxlength="60" autocomplete="name"></label>
+    <label><span class="sr">Address or pickup</span><textarea id="caddr" rows="2" placeholder="Delivery address, or write: pickup from shop" maxlength="200" autocomplete="street-address"></textarea></label>
+    <a class="btn wa" id="send" target="_blank" rel="noopener">Send order on WhatsApp</a>
+    <button class="rm" type="button" id="clear">Empty cart</button>
+  </div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script id="data" type="application/json">{"shop": {"name": "ALI MOBILE", "phone": "0331-0077332", "address": "Shop # 3, dhrabri plaza, Near UBL Bank, Golra Morr, Islamabad", "whatsapp": "923310077332", "updated": "13 Nov 2026"}, "items": [{"id": 1, "name": "Og", "brand": "ITS ME", "model": "Og", "category": "Glass", "price": 250, "used": false, "specs": [], "phone": false, "best": true, "new": false, "added": "2026-09-05", "image": "images/1.jpg"}, {"id": 55, "name": "Earphone", "brand": "Errorax", "model": "M-18", "category": "Handfree", "price": 350, "used": false, "specs": [], "phone": false, "best": true, "new": false, "added": "2026-09-14", "image": "images/55.jpg"}, {"id": 38, "name": "QC 3.0 20W", "brand": "Doomax", "model": "DX-QC01", "category": "Charger", "price": 1600, "used": false, "specs": [], "phone": false, "best": true, "new": false, "added": "2026-09-10", "image": "images/38.jpg"}, {"id": 2, "name": "usb - iphone", "brand": "Local", "model": "", "category": "Data Cable", "price": 350, "used": false, "specs": [], "phone": false, "best": true, "new": false, "added": "2026-09-05", "image": "images/2.jpg"}, {"id": 12, "name": "Type-C Usb", "brand": "Space", "model": "CE-457", "category": "Data Cable", "price": 550, "used": false, "specs": [], "phone": false, "best": true, "new": false, "added": "2026-09-06", "image": "images/12.jpg"}, {"id": 8, "name": "Usb Type-c", "brand": "Doomax", "model": "DX-CE 02", "category": "Data Cable", "price": 650, "used": false, "specs": [], "phone": false, "best": true, "new": false, "added": "2026-09-05", "image": "images/8.jpg"}, {"id": 90, "name": "25 W PD adapter org", "brand": "Samsung", "model": "EP-TA800", "category": "Charger", "price": 2500, "used": false, "specs": [], "phone": false, "best": true, "new": false, "added": "2026-09-21", "image": "images/90.jpg"}, {"id": 79, "name": "AMC Charger", "brand": "AMC", "model": "Local", "category": "Charger", "price": 450, "used": false, "specs": [], "phone": false, "best": true, "new": false, "added": "2026-09-20", "image": "images/79.jpg"}, {"id": 37, "name": "FC type-C 2.4", "brand": "Doomax", "model": "Doomac-201", "category": "Charger", "price": 1100, "used": false, "specs": [], "phone": false, "best": true, "new": false, "added": "2026-09-10", "image": "images/37.jpg"}, {"id": 18, "name": "PODS max", "brand": "Space", "model": "PD-542I", "category": "Handfree", "price": 2000, "used": false, "specs": [], "phone": false, "best": true, "new": false, "added": "2026-09-06", "image": "images/18.jpg"}, {"id": 19, "name": "Usb Micro", "brand": "Huawei", "model": "Local", "category": "Data Cable", "price": 150, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-06", "image": "images/19.jpg"}, {"id": 77, "name": "Ht-12 Earphone", "brand": "Ht power", "model": "Ht-12", "category": "Handfree", "price": 250, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-20", "image": "images/77.jpg"}, {"id": 48, "name": "Keypad protector", "brand": "Non", "model": "Non", "category": "Glass", "price": 100, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-13", "image": "images/48.jpg"}, {"id": 10, "name": "Micro Usb", "brand": "Space", "model": "CE-421", "category": "Data Cable", "price": 450, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-06", "image": "images/10.jpg"}, {"id": 84, "name": "Type -C local", "brand": "Local", "model": "Local", "category": "Datacqble", "price": 250, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-21", "image": "images/84.jpg"}, {"id": 69, "name": "Type C - Type C", "brand": "Doomax", "model": "DX-CE04", "category": "Data Cable", "price": 850, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-15", "image": "images/69.jpg"}, {"id": 85, "name": "Usb Micro local", "brand": "Local", "model": "Local", "category": "Data Cable", "price": 250, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-21", "image": "images/85.jpg"}, {"id": 68, "name": "Usb lightning", "brand": "Doomax", "model": "DX-CE01", "category": "Data Cable", "price": 600, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-15", "image": "images/68.jpg"}, {"id": 62, "name": "2 pin", "brand": "Local", "model": "Power Cable", "category": "Power Cable", "price": 250, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-14", "image": "images/62.jpg"}, {"id": 35, "name": "Battery", "brand": "Nokia", "model": "Bl-5c", "category": "Battery", "price": 270, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-10", "image": "images/35.jpg"}, {"id": 76, "name": "C - IPH PD nextGen", "brand": "Interlink", "model": "", "category": "Data Cable", "price": 1100, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-20", "image": "images/76.jpg"}, {"id": 6, "name": "C - Iphone", "brand": "Local", "model": "", "category": "Data Cable", "price": 550, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-05", "image": "images/6.jpg"}, {"id": 54, "name": "Enjoy earphones", "brand": "Sovo", "model": "Sh-15", "category": "Handfree", "price": 650, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-14", "image": "images/54.jpg"}, {"id": 71, "name": "Nokia battery", "brand": "Nokia", "model": "Bl-5c", "category": "Battery", "price": 270, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-16", "image": "images/71.jpg"}, {"id": 81, "name": "Nokia charger", "brand": "Ab links", "model": "8600", "category": "Charger", "price": 350, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-20", "image": "images/81.jpg"}, {"id": 73, "name": "Type C - lightning", "brand": "Local", "model": "", "category": "Data Cable", "price": 700, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-17", "image": "images/73.jpg"}, {"id": 13, "name": "Type C to Type-C", "brand": "Space", "model": "CE-71", "category": "Data Cable", "price": 1150, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-06", "image": "images/13.jpg"}, {"id": 11, "name": "Usb - Lightning", "brand": "Space", "model": "CE-422", "category": "Data Cable", "price": 650, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-06", "image": "images/11.jpg"}, {"id": 64, "name": "3 pin laptop", "brand": "Local", "model": "Power cable", "category": "Power Cable", "price": 300, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-14", "image": "images/64.jpg"}, {"id": 63, "name": "3 pin pc", "brand": "Local", "model": "power cable", "category": "Power Cable", "price": 300, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-14", "image": "images/63.jpg"}, {"id": 32, "name": "32 GB USB", "brand": "HP", "model": "", "category": "USB", "price": 2200, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-10", "image": "images/32.jpg"}, {"id": 142, "name": "Bl-5c", "brand": "HKT", "model": "Bl-5c", "category": "Battery", "price": 500, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-01", "image": "images/142.jpg"}, {"id": 143, "name": "Bl-5c", "brand": "MM2", "model": "Bl-5c", "category": "Battery", "price": 350, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-01", "image": "images/143.jpg"}, {"id": 154, "name": "C to lightning", "brand": "Toocki", "model": "Toocki", "category": "Data Cable", "price": 1200, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-07", "image": "images/154.jpg"}, {"id": 116, "name": "C-c copy", "brand": "Samsung", "model": "", "category": "Data Cable", "price": 600, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-10-06", "image": "images/116.jpg"}, {"id": 70, "name": "Car charger", "brand": "Doomax", "model": "DL-02", "category": "Charger", "price": 950, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-15", "image": "images/70.jpg"}, {"id": 129, "name": "Clip charger", "brand": "Doomax", "model": "Dc-02", "category": "Charger", "price": 650, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-10-11", "image": "images/129.jpg"}, {"id": 119, "name": "Cord c-c", "brand": "Sovo", "model": "Sc308", "category": "Data Cable", "price": 800, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-10-06", "image": "images/119.jpg"}, {"id": 17, "name": "EarPhones", "brand": "PHONiKO", "model": "HF - 019", "category": "Handfree", "price": 1000, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-06", "image": "images/17.jpg"}, {"id": 15, "name": "Electro", "brand": "Space", "model": "EL - 26", "category": "Handfree", "price": 450, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-06", "image": "images/15.jpg"}, {"id": 16, "name": "Electro", "brand": "Space", "model": "EL - 25", "category": "Handfree", "price": 500, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-06", "image": "images/16.jpg"}, {"id": 125, "name": "Gear usb lightning", "brand": "Sovo", "model": "Sc 011", "category": "Data Cable", "price": 650, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-10-09", "image": "images/125.jpg"}, {"id": 150, "name": "Joint PD c-lightning", "brand": "Sovo", "model": "Sc-318", "category": "Data Cable", "price": 1000, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-03", "image": "images/150.jpg"}, {"id": 108, "name": "Mousepad", "brand": "Mousepad", "model": "Q-3", "category": "Matts", "price": 350, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-10-04", "image": "images/108.jpg"}, {"id": 89, "name": "PD type C -C led", "brand": "Toocki", "model": "New", "category": "Data Cable", "price": 1000, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-21", "image": "images/89.jpg"}, {"id": 7, "name": "Play Type - C", "brand": "Space", "model": "Pl-50C", "category": "Handfree", "price": 1200, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-05", "image": "images/7.jpg"}, {"id": 27, "name": "Quick charge 3.0", "brand": "Space", "model": "WC-40", "category": "Charger", "price": 1800, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-09", "image": "images/27.jpg"}, {"id": 74, "name": "R-9 Earphone", "brand": "Ronin", "model": "R-9", "category": "Handfree", "price": 1100, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-20", "image": "images/74.jpg"}, {"id": 127, "name": "Typ C 2 in 1 cable", "brand": "Sovo", "model": "SHC-315", "category": "Converter", "price": 650, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-10-10", "image": "images/127.jpg"}, {"id": 14, "name": "Usb Micro", "brand": "Local", "model": "Infinix", "category": "Data Cable", "price": 250, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-06", "image": "images/14.jpg"}, {"id": 59, "name": "Vga cable", "brand": "Local", "model": "Local", "category": "Display cable", "price": 450, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-14", "image": "images/59.jpg"}, {"id": 112, "name": "two in one otg", "brand": "Sovo", "model": "Sou-375", "category": "Otg", "price": 550, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-10-05", "image": "images/112.jpg"}, {"id": 44, "name": "16gb USB", "brand": "HP", "model": "", "category": "Other", "price": 1500, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-10", "image": "images/44.jpg"}, {"id": 172, "name": "3-pin 20w charger", "brand": "Iphone merchentile", "model": "Mu7w2zp/A", "category": "Charger", "price": 4000, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-11", "image": "images/172.jpg"}, {"id": 171, "name": "360 jelly", "brand": "Jelly", "model": "", "category": "Sheets", "price": 500, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-11", "image": "images/171.jpg"}, {"id": 30, "name": "48W PD SC", "brand": "Space", "model": "Wc-80", "category": "Charger", "price": 3800, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-09", "image": "images/30.jpg"}, {"id": 80, "name": "Android tv box", "brand": "Z1", "model": "Z1 mini", "category": "Tv box", "price": 5500, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-20", "image": "images/80.jpg"}, {"id": 78, "name": "Aux", "brand": "Local", "model": "Local", "category": "Aux cable", "price": 300, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-20", "image": "images/78.jpg"}, {"id": 156, "name": "B100 copy", "brand": "Logitech", "model": "B100c", "category": "Mouse", "price": 800, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-09", "image": "images/156.jpg"}, {"id": 155, "name": "C to C", "brand": "Toocki", "model": "", "category": "Data Cable", "price": 800, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-07", "image": "images/155.jpg"}, {"id": 103, "name": "Car charger", "brand": "Doomax", "model": "Doomax-Qx03", "category": "Car charger", "price": 1200, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-09-30", "image": "images/103.jpg"}, {"id": 169, "name": "Car charger 2.4", "brand": "Doomax", "model": "DL01", "category": "Data Cable", "price": 1000, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-11", "image": "images/169.jpg"}, {"id": 168, "name": "Car charger PD", "brand": "Doomax", "model": "PL-01", "category": "Data Cable", "price": 1250, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-11", "image": "images/168.jpg"}, {"id": 164, "name": "Car charger Target series", "brand": "Sovo", "model": "SCR-460", "category": "Car charger", "price": 2300, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-09", "image": "images/164.jpg"}, {"id": 86, "name": "Charger", "brand": "Techno", "model": "XCU32", "category": "Charger", "price": 550, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-21", "image": "images/86.jpg"}, {"id": 87, "name": "Charger", "brand": "Oppo", "model": "Op52caph", "category": "Charger", "price": 600, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-21", "image": "images/87.jpg"}, {"id": 60, "name": "D -cable", "brand": "Local", "model": "Local", "category": "Display cable", "price": 600, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-14", "image": "images/60.jpg"}, {"id": 132, "name": "Dell 65W charger org", "brand": "Dell", "model": "", "category": "Laptop charger", "price": 3800, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-10-13", "image": "images/132.jpg"}, {"id": 133, "name": "Dell 65W type-C org", "brand": "Dell", "model": "", "category": "Laptop charger", "price": 5000, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-10-13", "image": "images/133.jpg"}, {"id": 100, "name": "Dp to vga converter", "brand": "HUIZHI", "model": "", "category": "Display Converter", "price": 1000, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-09-30", "image": "images/100.jpg"}, {"id": 56, "name": "Earphone", "brand": "Errorax", "model": "M-17", "category": "Handfree", "price": 400, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-14", "image": "images/56.jpg"}, {"id": 66, "name": "Earphone", "brand": "Errorax", "model": "Y-12", "category": "Handfree", "price": 450, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-14", "image": "images/66.jpg"}, {"id": 57, "name": "Earphones", "brand": "Errorax", "model": "Y-10", "category": "Handfree", "price": 400, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-14", "image": "images/57.jpg"}, {"id": 58, "name": "Earphones", "brand": "Errorax", "model": "X-16", "category": "Handfree", "price": 450, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-14", "image": "images/58.jpg"}, {"id": 159, "name": "Energy series 12w SF", "brand": "Sovo", "model": "Scr-419", "category": "Car charger", "price": 800, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-09", "image": "images/159.jpg"}, {"id": 117, "name": "Fluch c-c", "brand": "Sovo", "model": "Sc312", "category": "Other", "price": 1200, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-10-06", "image": "images/117.jpg"}, {"id": 39, "name": "GaN WC", "brand": "Space", "model": "WCG-10", "category": "Charger", "price": 4900, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-10", "image": "images/39.jpg"}, {"id": 61, "name": "HDMI - VGA", "brand": "Local", "model": "Local", "category": "Display cable", "price": 850, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-14", "image": "images/61.jpg"}, {"id": 25, "name": "HDMI To VGA", "brand": "FZ", "model": "", "category": "Converter", "price": 990, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-08", "image": "images/25.jpg"}, {"id": 65, "name": "HP charger org", "brand": "Hp", "model": "Latest", "category": "Laptop charger", "price": 2500, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-14", "image": "images/65.jpg"}, {"id": 166, "name": "Hdmi 3 MTr", "brand": "China", "model": "Hdmi", "category": "Display cable", "price": 950, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-09", "image": "images/166.jpg"}, {"id": 158, "name": "Hp bluetooth & wireless mouse", "brand": "Hp", "model": "W2 c", "category": "Mouse", "price": 1050, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-09", "image": "images/158.jpg"}, {"id": 170, "name": "Jelly sheet", "brand": "Membrane", "model": "", "category": "Sheets", "price": 500, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-11", "image": "images/170.jpg"}, {"id": 99, "name": "Keyboard wireless Media", "brand": "Logitech", "model": "k400+", "category": "Keyboard", "price": 9500, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-09-30", "image": "images/99.jpg"}, {"id": 134, "name": "Lenovo charger USB type", "brand": "Lenovo", "model": "", "category": "Laptop charger", "price": 2500, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-10-14", "image": "images/134.jpg"}, {"id": 42, "name": "Memory Card 16gb", "brand": "Samsung", "model": "EVOPlus", "category": "Memory Card", "price": 1600, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-10", "image": "images/42.jpg"}, {"id": 41, "name": "Memory card 8gb", "brand": "Samsung", "model": "Evo Plus", "category": "Memory Card", "price": 1400, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-10", "image": "images/41.jpg"}, {"id": 161, "name": "Micro strong series", "brand": "Sovo", "model": "Sc-004", "category": "Data Cable", "price": 500, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-09", "image": "images/161.jpg"}, {"id": 118, "name": "Node C - iPhone", "brand": "Sovo", "model": "Sc319", "category": "Data Cable", "price": 1000, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-10-06", "image": "images/118.jpg"}, {"id": 146, "name": "Orbit earbuds", "brand": "Sovo", "model": "SBT-950", "category": "WireLess", "price": 5800, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-01", "image": "images/146.jpg"}, {"id": 88, "name": "PD C - C", "brand": "Toocki", "model": "", "category": "Data Cable", "price": 800, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-21", "image": "images/88.jpg"}, {"id": 28, "name": "PD+ Quick charge", "brand": "Space", "model": "W-20", "category": "Charger", "price": 3300, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-09", "image": "images/28.jpg"}, {"id": 123, "name": "Phone stand", "brand": "Local", "model": "", "category": "Phone holder", "price": 650, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-10-08", "image": "images/123.jpg"}, {"id": 75, "name": "R-29 Earphone", "brand": "Ronin", "model": "R-29", "category": "Handfree", "price": 1000, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-20", "image": "images/75.jpg"}, {"id": 147, "name": "Runner", "brand": "Sovo", "model": "SBT-960", "category": "WireLess", "price": 4500, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-01", "image": "images/147.jpg"}, {"id": 137, "name": "Semi automatic holder", "brand": "German", "model": "Gr-02", "category": "Phone holder", "price": 1500, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-10-15", "image": "images/137.jpg"}, {"id": 94, "name": "Speed powerbank", "brand": "Space", "model": "Sp-30", "category": "powerBanks", "price": 10000, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-26", "image": "images/94.jpg"}, {"id": 136, "name": "T800 ULTRA WATCH", "brand": "Laxasfit", "model": "T800", "category": "Watch", "price": 2700, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-10-14", "image": "images/136.jpg"}, {"id": 144, "name": "Thmubs", "brand": "Local", "model": "", "category": "Gaming", "price": 150, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-01", "image": "images/144.jpg"}, {"id": 145, "name": "Thumbs", "brand": "Local", "model": "", "category": "Gaming", "price": 100, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-01", "image": "images/145.jpg"}, {"id": 51, "name": "Type -C", "brand": "PHONiKO", "model": "HF 19", "category": "Handfree", "price": 1000, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-13", "image": "images/51.jpg"}, {"id": 167, "name": "Type C - lightning", "brand": "Doomax", "model": "Dx-CE04", "category": "Data Cable", "price": 1050, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-11", "image": "images/167.jpg"}, {"id": 160, "name": "Type C Strong series 3A", "brand": "Sovo", "model": "Sc-004", "category": "Data Cable", "price": 650, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-09", "image": "images/160.jpg"}, {"id": 162, "name": "Type C active series 100w", "brand": "Sovo", "model": "Sc-007", "category": "Data Cable", "price": 850, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-09", "image": "images/162.jpg"}, {"id": 163, "name": "Type C force series 3.4A", "brand": "Sovo", "model": "Sc-006", "category": "Data Cable", "price": 8, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-09", "image": "images/163.jpg"}, {"id": 165, "name": "Type C prime series", "brand": "Sovo", "model": "SC-005", "category": "Car charger", "price": 600, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-09", "image": "images/165.jpg"}, {"id": 40, "name": "Usb", "brand": "Hp", "model": "HPFD770W-32", "category": "USB", "price": 1200, "used": false, "specs": [], "phone": false, "best": false, "new": false, "added": "2026-09-10", "image": "images/40.jpg"}, {"id": 102, "name": "Wired keyboard", "brand": "Dell", "model": "Kb-218", "category": "Keyboard", "price": 2500, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-09-30", "image": "images/102.jpg"}, {"id": 148, "name": "Wired mouse", "brand": "Dell", "model": "Ms116", "category": "Mouse", "price": 800, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-11-02", "image": "images/148.jpg"}, {"id": 104, "name": "Wireless adapter BT", "brand": "local", "model": "", "category": "Wireless Adapter", "price": 600, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-10-01", "image": "images/104.jpg"}, {"id": 101, "name": "Wireless mouse", "brand": "Logitech", "model": "M235", "category": "Mouse", "price": 7400, "used": false, "specs": [], "phone": false, "best": false, "new": true, "added": "2026-09-30", "image": "images/101.jpg"}]}</script>
+<script>
+"use strict";
+const {shop, items} = JSON.parse(document.getElementById('data').textContent);
+const byId = new Map(items.map(it => [it.id, it]));
+const $ = id => document.getElementById(id);
+const rs = n => 'Rs ' + Math.round(Number(n)).toLocaleString('en-PK');
+const wa = text => 'https://wa.me/' + (shop.whatsapp || '') + '?text=' + encodeURIComponent(text);
+const sub = it => [it.brand, it.model].filter(Boolean).join(' ');
+function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+function img(it, cls) { const i = el('img', cls); i.src = it.image; i.alt = it.name; i.loading = 'lazy'; i.decoding = 'async'; return i; }
+function toast(t) { const e = $('toast'); e.textContent = t; e.classList.add('on'); clearTimeout(toast.t); toast.t = setTimeout(() => e.classList.remove('on'), 1800); }
+
+/* ---------- shop details ---------- */
+$('shopname').textContent = $('fname').textContent = shop.name;
+document.title = shop.name + ' | Mobile accessories & repairs';
+const city = (shop.address.split(',').map(s => s.trim()).filter(Boolean).pop()) || '';
+$('kicker').textContent = city ? 'Now online in ' + city : 'Now online';
+$('herop').textContent = 'Chargers, cables, handsfree, power banks and phones from ' + shop.name + '. Add to cart and send your order on WhatsApp.';
+$('whyh').textContent = 'Why ' + shop.name;
+$('faqwhere').textContent = shop.address ? shop.address + (shop.phone ? '. Call ' + shop.phone + '.' : '.') : 'Message us on WhatsApp for directions.';
+$('copy').textContent = '© ' + new Date().getFullYear() + ' ' + shop.name;
+$('updated').textContent = 'Prices and stock updated ' + shop.updated;
+const hello = 'Hi ' + shop.name + ', ';
+['herowa', 'ctawa', 'float'].forEach(id => $(id).href = wa(hello));
+[ 'Order on WhatsApp', shop.phone && 'Call ' + shop.phone, 'Repairs at the shop', city && 'Based in ' + city ]
+  .filter(Boolean).forEach(t => $('strip').appendChild(el('span', '', t)));
+const fc = $('fcontact');
+if (shop.address) { const a = el('a', '', shop.address); a.href = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(shop.name + ' ' + shop.address); a.target = '_blank'; a.rel = 'noopener'; fc.appendChild(el('li')).appendChild(a); }
+if (shop.phone) { const a = el('a', '', 'Call ' + shop.phone); a.href = 'tel:' + shop.phone.replace(/[^\d+]/g, ''); fc.appendChild(el('li')).appendChild(a); }
+{ const a = el('a', '', 'WhatsApp us'); a.href = wa(hello); a.target = '_blank'; a.rel = 'noopener'; fc.appendChild(el('li')).appendChild(a); }
+
+/* ---------- cart (kept in this browser only) ---------- */
+let cart = {};
+try { cart = JSON.parse(localStorage.getItem('cart') || '{}') || {}; } catch (e) { cart = {}; }
+for (const k of Object.keys(cart)) {                     // drop items no longer sold, bad quantities
+  const n = Math.floor(Number(cart[k]));
+  if (!byId.has(Number(k)) || !(n > 0)) delete cart[k]; else cart[k] = Math.min(n, 99);
+}
+function saveCart() { try { localStorage.setItem('cart', JSON.stringify(cart)); } catch (e) {} drawCart(); }
+function addToCart(id, n = 1) { cart[id] = Math.min((cart[id] || 0) + n, 99); saveCart(); toast('Added to cart'); }
+function setQty(id, n) { if (n <= 0) delete cart[id]; else cart[id] = Math.min(n, 99); saveCart(); }
+function cartLines() { return Object.entries(cart).map(([id, n]) => [byId.get(Number(id)), n]); }
+function drawCart() {
+  const lines = cartLines(), count = lines.reduce((s, [, n]) => s + n, 0);
+  const b = $('badge'); b.textContent = count; b.hidden = !count;
+  const box = $('lines'); box.replaceChildren();
+  $('dfoot').hidden = !lines.length;
+  if (!lines.length) { box.appendChild(el('p', 'dempty', 'Your cart is empty. Add something you like.')); return; }
+  let total = 0;
+  for (const [it, n] of lines) {
+    total += it.price * n;
+    const row = el('div', 'line'); row.appendChild(img(it));
+    const mid = el('div'); mid.append(el('b', '', it.name), el('small', '', rs(it.price) + ' each'));
+    const q = el('div', 'qty'), mi = el('button', '', '−'), pl = el('button', '', '+');
+    mi.type = pl.type = 'button'; mi.setAttribute('aria-label', 'Less'); pl.setAttribute('aria-label', 'More');
+    mi.onclick = () => setQty(it.id, n - 1); pl.onclick = () => setQty(it.id, n + 1);
+    q.append(mi, el('output', '', n), pl);
+    const rm = el('button', 'rm', 'Remove'); rm.type = 'button'; rm.onclick = () => setQty(it.id, 0);
+    mid.append(q);
+    const right = el('div'); right.style.textAlign = 'right'; right.append(el('b', '', rs(it.price * n)), rm);
+    row.append(mid, right); box.appendChild(row);
+  }
+  $('total').textContent = rs(total);
+  updateSend();
+}
+function updateSend() {
+  const lines = cartLines(); let total = 0;
+  const list = lines.map(([it, n], i) => { total += it.price * n; return (i + 1) + '. ' + it.name + (sub(it) ? ' (' + sub(it) + ')' : '') + ' x' + n + ' = ' + rs(it.price * n); });
+  const name = $('cname').value.trim(), addr = $('caddr').value.trim();
+  $('send').href = wa(['Hi ' + shop.name + ', I want to order:', ...list, 'Total: ' + rs(total),
+    name && 'Name: ' + name, addr && 'Address: ' + addr].filter(Boolean).join('\n'));
+}
+$('cname').addEventListener('input', updateSend); $('caddr').addEventListener('input', updateSend);
+$('clear').onclick = () => { cart = {}; saveCart(); };
+const openCart = () => { drawCart(); $('cart').showModal(); };
+$('cartbtn').onclick = openCart; $('fcart').onclick = openCart;
+
+/* ---------- product card ---------- */
+function tags(it) {
+  const t = el('div', 'tags');
+  if (it.best) t.appendChild(el('span', 'tag best', 'Best Seller'));
+  if (it.new) t.appendChild(el('span', 'tag new', 'New'));
+  if (it.used) t.appendChild(el('span', 'tag used', 'Used'));
+  return t;
+}
+function card(it) {
+  const c = el('article', 'card');
+  const ph = el('button', 'ph'); ph.type = 'button'; ph.setAttribute('aria-label', 'View ' + it.name);
+  ph.append(img(it), tags(it)); ph.onclick = () => openProduct(it.id);
+  const info = el('div', 'info');
+  const nm = el('button', 'name', it.name); nm.type = 'button'; nm.onclick = () => openProduct(it.id);
+  info.append(el('span', 'cat', it.category), nm);
+  const s = [sub(it), it.specs.slice(0, 2).join(' · ')].filter(Boolean).join(' · ');
+  if (s) info.appendChild(el('span', 'sub', s));
+  info.appendChild(el('span', 'price', rs(it.price)));
+  const acts = el('div', 'acts'), add = el('button', 'add', 'Add to cart'); add.type = 'button';
+  add.onclick = () => { addToCart(it.id); add.textContent = 'Added ✓'; add.classList.add('done'); setTimeout(() => { add.textContent = 'Add to cart'; add.classList.remove('done'); }, 1400); };
+  const q = el('a', 'quick', '↗'); q.href = wa('Hi, I want to order: ' + it.name + (sub(it) ? ' (' + sub(it) + ')' : '') + ' - ' + rs(it.price));
+  q.target = '_blank'; q.rel = 'noopener'; q.title = 'Order this on WhatsApp'; q.setAttribute('aria-label', 'Order ' + it.name + ' on WhatsApp');
+  acts.append(add, q); info.appendChild(acts);
+  c.append(ph, info); return c;
+}
+
+/* ---------- product detail (shareable link: #p-<id>) ---------- */
+let pdItem = null, pdN = 1;
+function openProduct(id) {
+  const it = byId.get(Number(id)); if (!it) return;
+  pdItem = it; pdN = 1; $('pdqty').textContent = 1;
+  $('pdimg').src = it.image; $('pdimg').alt = it.name;
+  $('pdtags').replaceChildren(...tags(it).children);
+  $('pdcat').textContent = it.category; $('pdname').textContent = it.name;
+  $('pdsub').textContent = sub(it); $('pdprice').textContent = rs(it.price);
+  $('pdspecs').replaceChildren(...it.specs.map(s => el('li', '', s)));
+  pdWa();
+  if (location.hash !== '#p-' + it.id) history.replaceState(null, '', '#p-' + it.id);
+  if (!$('pd').open) $('pd').showModal();
+}
+function pdWa() { $('pdwa').href = wa('Hi, I want to order: ' + pdItem.name + (sub(pdItem) ? ' (' + sub(pdItem) + ')' : '') + ' x' + pdN + ' = ' + rs(pdItem.price * pdN)); }
+$('pdminus').onclick = () => { pdN = Math.max(1, pdN - 1); $('pdqty').textContent = pdN; pdWa(); };
+$('pdplus').onclick = () => { pdN = Math.min(99, pdN + 1); $('pdqty').textContent = pdN; pdWa(); };
+$('pdadd').onclick = () => { addToCart(pdItem.id, pdN); $('pd').close(); };
+$('pdshare').onclick = async () => {
+  const url = location.href.split('#')[0] + '#p-' + pdItem.id, text = pdItem.name + ' - ' + rs(pdItem.price);
+  try { if (navigator.share) { await navigator.share({title: shop.name, text, url}); return; }
+        await navigator.clipboard.writeText(url); toast('Link copied'); }
+  catch (e) { if (e.name !== 'AbortError') prompt('Copy this link:', url); }
+};
+$('pd').addEventListener('close', () => { if (location.hash.startsWith('#p-')) history.replaceState(null, '', location.pathname + location.search); });
+document.querySelectorAll('dialog').forEach(d => {
+  d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]')) d.close(); });
+});
+function fromHash() { const m = location.hash.match(/^#p-(\d+)$/); if (m) openProduct(m[1]); }
+window.addEventListener('hashchange', fromHash);
+
+/* ---------- categories ---------- */
+const cats = [...new Set(items.map(i => i.category))]
+  .map(c => ({c, list: items.filter(i => i.category === c)}))
+  .sort((a, b) => b.list.length - a.list.length || a.c.localeCompare(b.c));
+function goCat(c) { cat = c; q.value = ''; shown = PAGE_SIZE; syncChips(); draw(); $('shop').scrollIntoView(); }
+// ponytail: tiles show the 14 biggest categories (2 rows); every category stays in the menu and filter chips
+cats.slice(0, 14).forEach(({c, list}) => {
+  const t = el('button', 'tile'); t.type = 'button'; t.onclick = () => goCat(c);
+  t.append(img(list[0]), el('b', '', c), el('small', '', list.length + ' item' + (list.length === 1 ? '' : 's')));
+  $('tiles').appendChild(t);
+});
+if (!cats.length) $('catsec').remove();
+['All', ...cats.map(x => x.c)].forEach(c => {
+  for (const [box, cls] of [[$('navcats'), ''], [$('chips'), 'chip']]) {
+    const b = el('button', cls, c); b.type = 'button'; b.dataset.c = c; b.onclick = () => goCat(c); box.appendChild(b);
+  }
+});
+cats.slice(0, 6).forEach(({c}) => { const b = el('button', '', c); b.type = 'button'; b.onclick = () => goCat(c); $('fcats').appendChild(el('li')).appendChild(b); });
+
+/* ---------- hero slider: best sellers ---------- */
+const featured = (items.filter(i => i.best).length >= 3 ? items.filter(i => i.best) : items).slice(0, 5);
+let slideAt = 0, slideTimer = null;
+featured.forEach((it, i) => {
+  const s = el('div', 'slide' + (i ? '' : ' on')); s.setAttribute('role', 'group'); s.setAttribute('aria-label', (i + 1) + ' of ' + featured.length);
+  s.onclick = () => openProduct(it.id);
+  const cap = el('div', 'cap'); cap.append(el('b', '', it.name), el('span', '', rs(it.price)));
+  s.append(img(it), cap, el('span', 'ribbon', it.best ? 'Best Seller' : 'Featured'));
+  $('slider').insertBefore(s, $('dots'));
+  const d = el('button'); d.type = 'button'; d.setAttribute('aria-label', 'Show slide ' + (i + 1)); d.onclick = () => { showSlide(i); restartSlides(); };
+  $('dots').appendChild(d);
+});
+function showSlide(i) {
+  slideAt = (i + featured.length) % featured.length;
+  document.querySelectorAll('.slide').forEach((s, k) => s.classList.toggle('on', k === slideAt));
+  [...$('dots').children].forEach((d, k) => d.classList.toggle('on', k === slideAt));
+}
+function restartSlides() {
+  clearInterval(slideTimer);
+  if (featured.length > 1 && !matchMedia('(prefers-reduced-motion: reduce)').matches) slideTimer = setInterval(() => showSlide(slideAt + 1), 4500);
+}
+if (featured.length) { showSlide(0); restartSlides(); $('slider').onmouseenter = () => clearInterval(slideTimer); $('slider').onmouseleave = restartSlides; }
+else $('slider').remove();
+
+/* ---------- product rows ---------- */
+function productRow(title, note, list, onAll) {
+  if (list.length < 3) return;
+  const sec = el('section', 'wrap'), head = el('div', 'shead'), h = el('div');
+  h.append(el('h2', '', title), el('p', '', note)); head.appendChild(h);
+  const all = el('button', 'link', 'View all →'); all.type = 'button'; all.onclick = onAll; head.appendChild(all);
+  const wrap = el('div', 'rowwrap'), row = el('div', 'row');
+  row.append(...list.slice(0, 12).map(card));
+  for (const [cls, dir, label] of [['l', -1, 'Scroll left'], ['r', 1, 'Scroll right']]) {
+    const a = el('button', 'arrow ' + cls, dir < 0 ? '‹' : '›'); a.type = 'button'; a.setAttribute('aria-label', label);
+    a.onclick = () => row.scrollBy({left: dir * row.clientWidth * 0.8, behavior: 'smooth'}); wrap.appendChild(a);
+  }
+  wrap.prepend(row); sec.append(head, wrap); $('rows').appendChild(sec);
+}
+const byNew = [...items].sort((a, b) => b.added.localeCompare(a.added));
+productRow('Best Sellers', 'What our customers buy most', items.filter(i => i.best), () => { sortSel.value = 'pop'; goCat('All'); });
+productRow('New Arrivals', 'Just landed in the shop', items.filter(i => i.new).sort((a, b) => b.added.localeCompare(a.added)), () => { sortSel.value = 'new'; goCat('All'); });
+const phoneCats = [...new Set(items.filter(i => i.phone).map(i => i.category))];
+productRow('Mobile Phones', 'New and used phones in stock', items.filter(i => i.phone), () => phoneCats.length === 1 ? goCat(phoneCats[0]) : goCat('All'));
+
+/* ---------- shop all grid ---------- */
+const PAGE_SIZE = 24;
+let cat = 'All', shown = PAGE_SIZE;
+const q = $('q'), sortSel = $('sort');
+function syncChips() { document.querySelectorAll('[data-c]').forEach(b => b.classList.toggle('on', b.dataset.c === cat)); }
+function draw() {
+  const words = q.value.toLowerCase().split(/\s+/).filter(Boolean);
+  let list = items.filter(it => (cat === 'All' || it.category === cat) &&
+    words.every(w => [it.name, it.brand, it.model, it.category, ...it.specs].join(' ').toLowerCase().includes(w)));
+  const s = sortSel.value;
+  if (s === 'lo') list.sort((a, b) => a.price - b.price);
+  else if (s === 'hi') list.sort((a, b) => b.price - a.price);
+  else if (s === 'new') list.sort((a, b) => b.added.localeCompare(a.added));
+  $('grid').replaceChildren(...list.slice(0, shown).map(card));
+  $('count').textContent = list.length + ' item' + (list.length === 1 ? '' : 's') + (cat !== 'All' ? ' in ' + cat : '') + (words.length ? ' matching "' + q.value.trim() + '"' : '');
+  $('more').parentElement.hidden = list.length <= shown;
+  if (!list.length) {
+    const e = el('div', 'empty'); e.append(el('p', '', 'Nothing found. We may still have it.'));
+    const a = el('a', 'btn wa', 'Ask on WhatsApp'); a.href = wa(hello + 'do you have ' + (q.value.trim() || cat) + '?'); a.target = '_blank'; a.rel = 'noopener';
+    e.appendChild(a); $('grid').appendChild(e);
+  }
+}
+let qTimer;
+q.addEventListener('input', () => { clearTimeout(qTimer); qTimer = setTimeout(() => { shown = PAGE_SIZE; draw(); }, 120); });
+q.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); shown = PAGE_SIZE; draw(); $('shop').scrollIntoView(); } });
+sortSel.onchange = () => { shown = PAGE_SIZE; draw(); };
+$('more').onclick = () => { shown += PAGE_SIZE; draw(); };
+$('logo').onclick = e => { e.preventDefault(); scrollTo({top: 0}); };
+
+syncChips(); draw(); drawCart(); fromHash();
+</script>
+</body></html>
