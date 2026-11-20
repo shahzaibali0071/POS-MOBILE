@@ -30,7 +30,12 @@ The catalog comes from the shop's POS:
 1. `python scripts/pos_to_catalog.py <mobile_pos.db> public/products` writes `src/data/products.json`
    (in-stock items only; cost prices and stock counts are never included).
 2. Shop photos live in `public/products/<posId>.webp`.
-3. Official brand photos: add `"<posId>": "<url>"` to `src/data/official-images.json`. They are downloaded
-   during `npm run build` (prebuild) and replace the shop photo; a failed download keeps the shop photo.
+3. Official brand photos (downloaded during `npm run build`, replacing the shop photo):
+   - `src/data/official-images.json`: hand-checked `"<posId>": "<url>"` photos (always win).
+   - `src/data/brand-sources.json`: brand Shopify sites (Sovo, Space, Ronin). Every build saves their full
+     catalog to `/brand-catalog/<brand>.json` on the site and auto-matches new POS products by model code
+     (see `/brand-catalog/matches.json`).
+   - `src/data/official-exclude.json`: products whose brand photo shows the wrong variant.
+   A failed download never breaks the build; the shop photo stays.
 4. Orders: `POST /api/orders` stores them privately in Vercel Blob; the POS downloads them from
    `GET /api/orders` with its key (`POS_API_KEY`).

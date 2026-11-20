@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# generated at build (scripts/fetch-official-images.mts)
+/public/products/official/
+/public/brand-catalog/

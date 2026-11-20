@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prebuild": "node scripts/fetch-official-images.mjs",
+    "prebuild": "tsx scripts/fetch-official-images.mts",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
