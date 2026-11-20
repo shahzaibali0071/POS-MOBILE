@@ -1,0 +1,3162 @@
+{
+ "categories": [
+  {
+   "slug": "earbuds",
+   "name": "Earbuds & Neckbands",
+   "blurb": "Wireless earbuds and neckbands",
+   "art": "earbuds"
+  },
+  {
+   "slug": "handsfree",
+   "name": "Handsfree",
+   "blurb": "Wired earphones with mic",
+   "art": "handsfree"
+  },
+  {
+   "slug": "chargers",
+   "name": "Chargers",
+   "blurb": "Wall, car and laptop chargers",
+   "art": "charger"
+  },
+  {
+   "slug": "cables",
+   "name": "Cables",
+   "blurb": "Charging, audio and display cables",
+   "art": "cable"
+  },
+  {
+   "slug": "power-banks",
+   "name": "Power Banks",
+   "blurb": "Charge on the go",
+   "art": "powerbank"
+  },
+  {
+   "slug": "audio",
+   "name": "Speakers & Mics",
+   "blurb": "Speakers and wireless microphones",
+   "art": "speaker"
+  },
+  {
+   "slug": "smart-watches",
+   "name": "Smart Watches",
+   "blurb": "Fitness and calling watches",
+   "art": "watch"
+  },
+  {
+   "slug": "computer",
+   "name": "Computer",
+   "blurb": "Mice, keyboards, USB drives and more",
+   "art": "cable"
+  },
+  {
+   "slug": "mobiles",
+   "name": "Mobile Phones",
+   "blurb": "Keypad phones",
+   "art": "watch"
+  },
+  {
+   "slug": "accessories",
+   "name": "Accessories",
+   "blurb": "Protectors, holders, batteries and more",
+   "art": "handsfree"
+  }
+ ],
+ "products": [
+  {
+   "posId": 1,
+   "slug": "its-me-og-1",
+   "model": "ITS ME",
+   "name": "Og",
+   "category": "accessories",
+   "tagline": "Protectors, holders, batteries and more",
+   "price": 250,
+   "image": "/products/1.webp",
+   "specs": [
+    [
+     "Brand",
+     "ITS ME"
+    ],
+    [
+     "Category",
+     "Accessories"
+    ]
+   ],
+   "bestSellerRank": 1
+  },
+  {
+   "posId": 2,
+   "slug": "usb-iphone-2",
+   "model": "",
+   "name": "Usb - iphone",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 350,
+   "image": "/products/2.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ],
+   "bestSellerRank": 4
+  },
+  {
+   "posId": 3,
+   "slug": "samsung-45w-orignal-ep-ta845-3",
+   "model": "Samsung",
+   "name": "45w Orignal (EP-TA845)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 4000,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Samsung"
+    ],
+    [
+     "Model",
+     "EP-TA845"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 5,
+   "slug": "apple-3-pin-20w-iphone-5",
+   "model": "Apple",
+   "name": "3-pin 20W (IPHONE)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 2500,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Apple"
+    ],
+    [
+     "Model",
+     "IPHONE"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 6,
+   "slug": "c-iphone-6",
+   "model": "",
+   "name": "C - Iphone",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 550,
+   "image": "/products/6.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 7,
+   "slug": "space-play-type-c-pl-50c-7",
+   "model": "Space",
+   "name": "Play Type - C (PL-50C)",
+   "category": "handsfree",
+   "tagline": "Wired earphones with mic",
+   "price": 1200,
+   "image": "/products/7.webp",
+   "specs": [
+    [
+     "Brand",
+     "Space"
+    ],
+    [
+     "Model",
+     "PL-50C"
+    ],
+    [
+     "Category",
+     "Handsfree"
+    ]
+   ]
+  },
+  {
+   "posId": 8,
+   "slug": "doomax-usb-type-c-dx-ce-02-8",
+   "model": "Doomax",
+   "name": "Usb Type-c (DX-CE 02)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 650,
+   "image": "/products/8.webp",
+   "specs": [
+    [
+     "Brand",
+     "Doomax"
+    ],
+    [
+     "Model",
+     "DX-CE 02"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ],
+   "bestSellerRank": 8
+  },
+  {
+   "posId": 10,
+   "slug": "space-micro-usb-ce-421-10",
+   "model": "Space",
+   "name": "Micro Usb (CE-421)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 450,
+   "image": "/products/10.webp",
+   "specs": [
+    [
+     "Brand",
+     "Space"
+    ],
+    [
+     "Model",
+     "CE-421"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 11,
+   "slug": "space-usb-lightning-ce-422-11",
+   "model": "Space",
+   "name": "Usb - Lightning (CE-422)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 650,
+   "image": "/products/11.webp",
+   "specs": [
+    [
+     "Brand",
+     "Space"
+    ],
+    [
+     "Model",
+     "CE-422"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 12,
+   "slug": "space-type-c-usb-ce-457-12",
+   "model": "Space",
+   "name": "Type-C Usb (CE-457)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 550,
+   "image": "/products/12.webp",
+   "specs": [
+    [
+     "Brand",
+     "Space"
+    ],
+    [
+     "Model",
+     "CE-457"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ],
+   "bestSellerRank": 7
+  },
+  {
+   "posId": 13,
+   "slug": "space-type-c-to-type-c-ce-71-13",
+   "model": "Space",
+   "name": "Type C to Type-C (CE-71)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 1150,
+   "image": "/products/13.webp",
+   "specs": [
+    [
+     "Brand",
+     "Space"
+    ],
+    [
+     "Model",
+     "CE-71"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 14,
+   "slug": "usb-micro-infinix-14",
+   "model": "",
+   "name": "Usb Micro (INFINIX)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 250,
+   "image": "/products/14.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Model",
+     "INFINIX"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 15,
+   "slug": "space-electro-el-26-15",
+   "model": "Space",
+   "name": "Electro (EL - 26)",
+   "category": "handsfree",
+   "tagline": "Wired earphones with mic",
+   "price": 450,
+   "image": "/products/15.webp",
+   "specs": [
+    [
+     "Brand",
+     "Space"
+    ],
+    [
+     "Model",
+     "EL - 26"
+    ],
+    [
+     "Category",
+     "Handsfree"
+    ]
+   ]
+  },
+  {
+   "posId": 16,
+   "slug": "space-electro-el-25-16",
+   "model": "Space",
+   "name": "Electro (EL - 25)",
+   "category": "handsfree",
+   "tagline": "Wired earphones with mic",
+   "price": 500,
+   "image": "/products/16.webp",
+   "specs": [
+    [
+     "Brand",
+     "Space"
+    ],
+    [
+     "Model",
+     "EL - 25"
+    ],
+    [
+     "Category",
+     "Handsfree"
+    ]
+   ]
+  },
+  {
+   "posId": 17,
+   "slug": "phoniko-earphones-hf-019-17",
+   "model": "PHONiKO",
+   "name": "EarPhones (HF - 019)",
+   "category": "handsfree",
+   "tagline": "Wired earphones with mic",
+   "price": 1000,
+   "image": "/products/17.webp",
+   "specs": [
+    [
+     "Brand",
+     "PHONiKO"
+    ],
+    [
+     "Model",
+     "HF - 019"
+    ],
+    [
+     "Category",
+     "Handsfree"
+    ]
+   ]
+  },
+  {
+   "posId": 18,
+   "slug": "space-pods-max-pd-542i-18",
+   "model": "Space",
+   "name": "PODS max (PD-542I)",
+   "category": "handsfree",
+   "tagline": "Wired earphones with mic",
+   "price": 2000,
+   "image": "/products/18.webp",
+   "specs": [
+    [
+     "Brand",
+     "Space"
+    ],
+    [
+     "Model",
+     "PD-542I"
+    ],
+    [
+     "Category",
+     "Handsfree"
+    ]
+   ],
+   "bestSellerRank": 12
+  },
+  {
+   "posId": 19,
+   "slug": "huawei-usb-micro-19",
+   "model": "Huawei",
+   "name": "Usb Micro",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 150,
+   "image": "/products/19.webp",
+   "specs": [
+    [
+     "Brand",
+     "Huawei"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 20,
+   "slug": "doomax-usb-micro-dx-ce04-20",
+   "model": "Doomax",
+   "name": "Usb - Micro (DX-CE04)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 650,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Doomax"
+    ],
+    [
+     "Model",
+     "DX-CE04"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ],
+   "bestSellerRank": 9
+  },
+  {
+   "posId": 21,
+   "slug": "gloves-pub-g-gloves-21",
+   "model": "Gloves",
+   "name": "Pub-G Gloves",
+   "category": "accessories",
+   "tagline": "Protectors, holders, batteries and more",
+   "price": 100,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Gloves"
+    ],
+    [
+     "Category",
+     "Accessories"
+    ]
+   ]
+  },
+  {
+   "posId": 22,
+   "slug": "yaoji-usb-micro-c-02-22",
+   "model": "YAOJI",
+   "name": "Usb - Micro (C-02)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 350,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "YAOJI"
+    ],
+    [
+     "Model",
+     "C-02"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ],
+   "bestSellerRank": 3
+  },
+  {
+   "posId": 23,
+   "slug": "yaoji-usb-type-c-ce-01-23",
+   "model": "YAOJI",
+   "name": "Usb- Type C (CE-01)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 350,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "YAOJI"
+    ],
+    [
+     "Model",
+     "CE-01"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ],
+   "bestSellerRank": 2
+  },
+  {
+   "posId": 24,
+   "slug": "perfect-path-hdmi-1-5mtr-24",
+   "model": "Perfect Path",
+   "name": "HDMI 1.5MTR",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 450,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Perfect Path"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 25,
+   "slug": "fz-hdmi-to-vga-25",
+   "model": "FZ",
+   "name": "HDMI To VGA",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 990,
+   "image": "/products/25.webp",
+   "specs": [
+    [
+     "Brand",
+     "FZ"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 26,
+   "slug": "amaze-hdmi-to-dp-a820-26",
+   "model": "Amaze",
+   "name": "HDMI tO DP (A820)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 3000,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Amaze"
+    ],
+    [
+     "Model",
+     "A820"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 27,
+   "slug": "space-quick-charge-3-0-wc-40-27",
+   "model": "Space",
+   "name": "Quick charge 3.0 (WC-40)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 1800,
+   "image": "/products/27.webp",
+   "specs": [
+    [
+     "Brand",
+     "Space"
+    ],
+    [
+     "Model",
+     "WC-40"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 28,
+   "slug": "space-pd-quick-charge-w-20-28",
+   "model": "Space",
+   "name": "PD+ Quick charge (W-20)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 3300,
+   "image": "/products/28.webp",
+   "specs": [
+    [
+     "Brand",
+     "Space"
+    ],
+    [
+     "Model",
+     "W-20"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 30,
+   "slug": "space-48w-pd-sc-wc-80-30",
+   "model": "Space",
+   "name": "48W PD SC (WC-80)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 3800,
+   "image": "/products/30.webp",
+   "specs": [
+    [
+     "Brand",
+     "Space"
+    ],
+    [
+     "Model",
+     "WC-80"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 31,
+   "slug": "hp-45-w-laptop-charger-31",
+   "model": "Hp",
+   "name": "45 w Laptop Charger",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 2500,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Hp"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 32,
+   "slug": "hp-32-gb-usb-32",
+   "model": "HP",
+   "name": "32 GB USB",
+   "category": "computer",
+   "tagline": "Mice, keyboards, USB drives and more",
+   "price": 2200,
+   "image": "/products/32.webp",
+   "specs": [
+    [
+     "Brand",
+     "HP"
+    ],
+    [
+     "Category",
+     "Computer"
+    ]
+   ]
+  },
+  {
+   "posId": 33,
+   "slug": "erorax-handfree-x16-33",
+   "model": "Erorax",
+   "name": "Handfree (X16)",
+   "category": "handsfree",
+   "tagline": "Wired earphones with mic",
+   "price": 350,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Erorax"
+    ],
+    [
+     "Model",
+     "X16"
+    ],
+    [
+     "Category",
+     "Handsfree"
+    ]
+   ]
+  },
+  {
+   "posId": 34,
+   "slug": "back-protector-laptop-34",
+   "model": "",
+   "name": "Back Protector laptop",
+   "category": "accessories",
+   "tagline": "Protectors, holders, batteries and more",
+   "price": 500,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Accessories"
+    ]
+   ]
+  },
+  {
+   "posId": 35,
+   "slug": "nokia-battery-bl-5c-35",
+   "model": "Nokia",
+   "name": "Battery (BL-5C)",
+   "category": "accessories",
+   "tagline": "Protectors, holders, batteries and more",
+   "price": 270,
+   "image": "/products/35.webp",
+   "specs": [
+    [
+     "Brand",
+     "Nokia"
+    ],
+    [
+     "Model",
+     "BL-5C"
+    ],
+    [
+     "Category",
+     "Accessories"
+    ]
+   ]
+  },
+  {
+   "posId": 37,
+   "slug": "doomax-fc-type-c-2-4-doomac-201-37",
+   "model": "Doomax",
+   "name": "FC type-C 2.4 (DOOMAC-201)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 1100,
+   "image": "/products/37.webp",
+   "specs": [
+    [
+     "Brand",
+     "Doomax"
+    ],
+    [
+     "Model",
+     "DOOMAC-201"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 38,
+   "slug": "doomax-qc-3-0-20w-dx-qc01-38",
+   "model": "Doomax",
+   "name": "QC 3.0 20W (DX-QC01)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 1600,
+   "image": "/products/38.webp",
+   "specs": [
+    [
+     "Brand",
+     "Doomax"
+    ],
+    [
+     "Model",
+     "DX-QC01"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ],
+   "bestSellerRank": 5
+  },
+  {
+   "posId": 39,
+   "slug": "space-gan-wc-wcg-10-39",
+   "model": "Space",
+   "name": "GaN WC (WCG-10)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 4900,
+   "image": "/products/39.webp",
+   "specs": [
+    [
+     "Brand",
+     "Space"
+    ],
+    [
+     "Model",
+     "WCG-10"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 40,
+   "slug": "hp-usb-hpfd770w-32-40",
+   "model": "Hp",
+   "name": "Usb (HPFD770W-32)",
+   "category": "computer",
+   "tagline": "Mice, keyboards, USB drives and more",
+   "price": 1200,
+   "image": "/products/40.webp",
+   "specs": [
+    [
+     "Brand",
+     "Hp"
+    ],
+    [
+     "Model",
+     "HPFD770W-32"
+    ],
+    [
+     "Category",
+     "Computer"
+    ]
+   ]
+  },
+  {
+   "posId": 41,
+   "slug": "samsung-memory-card-8gb-evo-plus-41",
+   "model": "Samsung",
+   "name": "Memory card 8gb (EVO PLUS)",
+   "category": "computer",
+   "tagline": "Mice, keyboards, USB drives and more",
+   "price": 1400,
+   "image": "/products/41.webp",
+   "specs": [
+    [
+     "Brand",
+     "Samsung"
+    ],
+    [
+     "Model",
+     "EVO PLUS"
+    ],
+    [
+     "Category",
+     "Computer"
+    ]
+   ]
+  },
+  {
+   "posId": 42,
+   "slug": "samsung-memory-card-16gb-evoplus-42",
+   "model": "Samsung",
+   "name": "Memory Card 16gb (EVOPLUS)",
+   "category": "computer",
+   "tagline": "Mice, keyboards, USB drives and more",
+   "price": 1600,
+   "image": "/products/42.webp",
+   "specs": [
+    [
+     "Brand",
+     "Samsung"
+    ],
+    [
+     "Model",
+     "EVOPLUS"
+    ],
+    [
+     "Category",
+     "Computer"
+    ]
+   ]
+  },
+  {
+   "posId": 44,
+   "slug": "hp-16gb-usb-44",
+   "model": "HP",
+   "name": "16gb USB",
+   "category": "computer",
+   "tagline": "Mice, keyboards, USB drives and more",
+   "price": 1500,
+   "image": "/products/44.webp",
+   "specs": [
+    [
+     "Brand",
+     "HP"
+    ],
+    [
+     "Category",
+     "Computer"
+    ]
+   ]
+  },
+  {
+   "posId": 46,
+   "slug": "power-power-cable-pc-46",
+   "model": "Power",
+   "name": "Power Cable Pc",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 250,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Power"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 48,
+   "slug": "keypad-protector-48",
+   "model": "",
+   "name": "Keypad protector",
+   "category": "accessories",
+   "tagline": "Protectors, holders, batteries and more",
+   "price": 100,
+   "image": "/products/48.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Accessories"
+    ]
+   ]
+  },
+  {
+   "posId": 50,
+   "slug": "type-c-handfree-50",
+   "model": "",
+   "name": "Type -C Handfree",
+   "category": "handsfree",
+   "tagline": "Wired earphones with mic",
+   "price": 700,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Handsfree"
+    ]
+   ]
+  },
+  {
+   "posId": 51,
+   "slug": "phoniko-type-c-hf-19-51",
+   "model": "PHONiKO",
+   "name": "Type -C (HF 19)",
+   "category": "handsfree",
+   "tagline": "Wired earphones with mic",
+   "price": 1000,
+   "image": "/products/51.webp",
+   "specs": [
+    [
+     "Brand",
+     "PHONiKO"
+    ],
+    [
+     "Model",
+     "HF 19"
+    ],
+    [
+     "Category",
+     "Handsfree"
+    ]
+   ]
+  },
+  {
+   "posId": 54,
+   "slug": "sovo-enjoy-earphones-sh-15-54",
+   "model": "Sovo",
+   "name": "Enjoy earphones (SH-15)",
+   "category": "handsfree",
+   "tagline": "Wired earphones with mic",
+   "price": 650,
+   "image": "/products/54.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SH-15"
+    ],
+    [
+     "Category",
+     "Handsfree"
+    ]
+   ]
+  },
+  {
+   "posId": 55,
+   "slug": "errorax-earphone-m-18-55",
+   "model": "Errorax",
+   "name": "Earphone (M-18)",
+   "category": "handsfree",
+   "tagline": "Wired earphones with mic",
+   "price": 350,
+   "image": "/products/55.webp",
+   "specs": [
+    [
+     "Brand",
+     "Errorax"
+    ],
+    [
+     "Model",
+     "M-18"
+    ],
+    [
+     "Category",
+     "Handsfree"
+    ]
+   ],
+   "bestSellerRank": 6
+  },
+  {
+   "posId": 56,
+   "slug": "errorax-earphone-m-17-56",
+   "model": "Errorax",
+   "name": "Earphone (M-17)",
+   "category": "handsfree",
+   "tagline": "Wired earphones with mic",
+   "price": 400,
+   "image": "/products/56.webp",
+   "specs": [
+    [
+     "Brand",
+     "Errorax"
+    ],
+    [
+     "Model",
+     "M-17"
+    ],
+    [
+     "Category",
+     "Handsfree"
+    ]
+   ]
+  },
+  {
+   "posId": 57,
+   "slug": "errorax-earphones-y-10-57",
+   "model": "Errorax",
+   "name": "Earphones (Y-10)",
+   "category": "handsfree",
+   "tagline": "Wired earphones with mic",
+   "price": 400,
+   "image": "/products/57.webp",
+   "specs": [
+    [
+     "Brand",
+     "Errorax"
+    ],
+    [
+     "Model",
+     "Y-10"
+    ],
+    [
+     "Category",
+     "Handsfree"
+    ]
+   ]
+  },
+  {
+   "posId": 58,
+   "slug": "errorax-earphones-x-16-58",
+   "model": "Errorax",
+   "name": "Earphones (X-16)",
+   "category": "handsfree",
+   "tagline": "Wired earphones with mic",
+   "price": 450,
+   "image": "/products/58.webp",
+   "specs": [
+    [
+     "Brand",
+     "Errorax"
+    ],
+    [
+     "Model",
+     "X-16"
+    ],
+    [
+     "Category",
+     "Handsfree"
+    ]
+   ]
+  },
+  {
+   "posId": 59,
+   "slug": "vga-cable-59",
+   "model": "",
+   "name": "Vga cable",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 450,
+   "image": "/products/59.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 60,
+   "slug": "d-cable-60",
+   "model": "",
+   "name": "D -cable",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 600,
+   "image": "/products/60.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 61,
+   "slug": "hdmi-vga-61",
+   "model": "",
+   "name": "HDMI - VGA",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 850,
+   "image": "/products/61.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 62,
+   "slug": "2-pin-power-cable-62",
+   "model": "",
+   "name": "2 pin (POWER CABLE)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 250,
+   "image": "/products/62.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Model",
+     "POWER CABLE"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 63,
+   "slug": "3-pin-pc-power-cable-63",
+   "model": "",
+   "name": "3 pin pc (POWER CABLE)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 300,
+   "image": "/products/63.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Model",
+     "POWER CABLE"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 64,
+   "slug": "3-pin-laptop-power-cable-64",
+   "model": "",
+   "name": "3 pin laptop (POWER CABLE)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 300,
+   "image": "/products/64.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Model",
+     "POWER CABLE"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 65,
+   "slug": "hp-hp-charger-org-65",
+   "model": "Hp",
+   "name": "HP charger org",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 2500,
+   "image": "/products/65.webp",
+   "specs": [
+    [
+     "Brand",
+     "Hp"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 66,
+   "slug": "errorax-earphone-y-12-66",
+   "model": "Errorax",
+   "name": "Earphone (Y-12)",
+   "category": "handsfree",
+   "tagline": "Wired earphones with mic",
+   "price": 450,
+   "image": "/products/66.webp",
+   "specs": [
+    [
+     "Brand",
+     "Errorax"
+    ],
+    [
+     "Model",
+     "Y-12"
+    ],
+    [
+     "Category",
+     "Handsfree"
+    ]
+   ]
+  },
+  {
+   "posId": 68,
+   "slug": "doomax-usb-lightning-dx-ce01-68",
+   "model": "Doomax",
+   "name": "Usb lightning (DX-CE01)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 600,
+   "image": "/products/68.webp",
+   "specs": [
+    [
+     "Brand",
+     "Doomax"
+    ],
+    [
+     "Model",
+     "DX-CE01"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 69,
+   "slug": "doomax-type-c-type-c-dx-ce04-69",
+   "model": "Doomax",
+   "name": "Type C - Type C (DX-CE04)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 850,
+   "image": "/products/69.webp",
+   "specs": [
+    [
+     "Brand",
+     "Doomax"
+    ],
+    [
+     "Model",
+     "DX-CE04"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ],
+   "bestSellerRank": 10
+  },
+  {
+   "posId": 70,
+   "slug": "doomax-car-charger-dl-02-70",
+   "model": "Doomax",
+   "name": "Car charger (DL-02)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 950,
+   "image": "/products/70.webp",
+   "specs": [
+    [
+     "Brand",
+     "Doomax"
+    ],
+    [
+     "Model",
+     "DL-02"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 71,
+   "slug": "nokia-nokia-battery-bl-5c-71",
+   "model": "Nokia",
+   "name": "Nokia battery (BL-5C)",
+   "category": "accessories",
+   "tagline": "Protectors, holders, batteries and more",
+   "price": 270,
+   "image": "/products/71.webp",
+   "specs": [
+    [
+     "Brand",
+     "Nokia"
+    ],
+    [
+     "Model",
+     "BL-5C"
+    ],
+    [
+     "Category",
+     "Accessories"
+    ]
+   ]
+  },
+  {
+   "posId": 73,
+   "slug": "type-c-lightning-73",
+   "model": "",
+   "name": "Type C - lightning",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 700,
+   "image": "/products/73.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 74,
+   "slug": "ronin-r-9-earphone-74",
+   "model": "Ronin",
+   "name": "R-9 Earphone",
+   "category": "handsfree",
+   "tagline": "Wired earphones with mic",
+   "price": 1100,
+   "image": "/products/74.webp",
+   "specs": [
+    [
+     "Brand",
+     "Ronin"
+    ],
+    [
+     "Category",
+     "Handsfree"
+    ]
+   ]
+  },
+  {
+   "posId": 75,
+   "slug": "ronin-r-29-earphone-75",
+   "model": "Ronin",
+   "name": "R-29 Earphone",
+   "category": "handsfree",
+   "tagline": "Wired earphones with mic",
+   "price": 1000,
+   "image": "/products/75.webp",
+   "specs": [
+    [
+     "Brand",
+     "Ronin"
+    ],
+    [
+     "Category",
+     "Handsfree"
+    ]
+   ]
+  },
+  {
+   "posId": 76,
+   "slug": "interlink-c-iph-pd-nextgen-76",
+   "model": "Interlink",
+   "name": "C - IPH PD nextGen",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 1100,
+   "image": "/products/76.webp",
+   "specs": [
+    [
+     "Brand",
+     "Interlink"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 77,
+   "slug": "ht-power-ht-12-earphone-77",
+   "model": "Ht power",
+   "name": "Ht-12 Earphone",
+   "category": "handsfree",
+   "tagline": "Wired earphones with mic",
+   "price": 250,
+   "image": "/products/77.webp",
+   "specs": [
+    [
+     "Brand",
+     "Ht power"
+    ],
+    [
+     "Category",
+     "Handsfree"
+    ]
+   ]
+  },
+  {
+   "posId": 78,
+   "slug": "aux-78",
+   "model": "",
+   "name": "Aux",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 300,
+   "image": "/products/78.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 80,
+   "slug": "z1-android-tv-box-z1-mini-80",
+   "model": "Z1",
+   "name": "Android tv box (Z1 MINI)",
+   "category": "computer",
+   "tagline": "Mice, keyboards, USB drives and more",
+   "price": 5500,
+   "image": "/products/80.webp",
+   "specs": [
+    [
+     "Brand",
+     "Z1"
+    ],
+    [
+     "Model",
+     "Z1 MINI"
+    ],
+    [
+     "Category",
+     "Computer"
+    ]
+   ]
+  },
+  {
+   "posId": 81,
+   "slug": "ab-links-nokia-charger-8600-81",
+   "model": "Ab links",
+   "name": "Nokia charger (8600)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 350,
+   "image": "/products/81.webp",
+   "specs": [
+    [
+     "Brand",
+     "Ab links"
+    ],
+    [
+     "Model",
+     "8600"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 83,
+   "slug": "spliter-iph-2-in-1-83",
+   "model": "",
+   "name": "Spliter IPH 2 in 1",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 700,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 84,
+   "slug": "type-c-local-84",
+   "model": "",
+   "name": "Type -C local",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 250,
+   "image": "/products/84.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ],
+   "bestSellerRank": 11
+  },
+  {
+   "posId": 85,
+   "slug": "usb-micro-local-85",
+   "model": "",
+   "name": "Usb Micro local",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 250,
+   "image": "/products/85.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 86,
+   "slug": "techno-charger-xcu32-86",
+   "model": "Techno",
+   "name": "Charger (XCU32)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 550,
+   "image": "/products/86.webp",
+   "specs": [
+    [
+     "Brand",
+     "Techno"
+    ],
+    [
+     "Model",
+     "XCU32"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 87,
+   "slug": "oppo-charger-op52caph-87",
+   "model": "Oppo",
+   "name": "Charger (OP52CAPH)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 600,
+   "image": "/products/87.webp",
+   "specs": [
+    [
+     "Brand",
+     "Oppo"
+    ],
+    [
+     "Model",
+     "OP52CAPH"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 88,
+   "slug": "toocki-pd-c-c-88",
+   "model": "Toocki",
+   "name": "PD C - C",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 800,
+   "image": "/products/88.webp",
+   "specs": [
+    [
+     "Brand",
+     "Toocki"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 89,
+   "slug": "toocki-pd-type-c-c-led-89",
+   "model": "Toocki",
+   "name": "PD type C -C led",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 1000,
+   "image": "/products/89.webp",
+   "specs": [
+    [
+     "Brand",
+     "Toocki"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 90,
+   "slug": "samsung-25-w-pd-adapter-org-ep-ta800-90",
+   "model": "Samsung",
+   "name": "25 W PD adapter org (EP-TA800)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 2500,
+   "image": "/products/90.webp",
+   "specs": [
+    [
+     "Brand",
+     "Samsung"
+    ],
+    [
+     "Model",
+     "EP-TA800"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 92,
+   "slug": "space-pd-wireless-powerbank-w1-92",
+   "model": "Space",
+   "name": "PD + Wireless PowerBank (W1)",
+   "category": "power-banks",
+   "tagline": "Charge on the go",
+   "price": 6500,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Space"
+    ],
+    [
+     "Model",
+     "W1"
+    ],
+    [
+     "Category",
+     "Power Banks"
+    ]
+   ]
+  },
+  {
+   "posId": 94,
+   "slug": "space-speed-powerbank-sp-30-94",
+   "model": "Space",
+   "name": "Speed powerbank (SP-30)",
+   "category": "power-banks",
+   "tagline": "Charge on the go",
+   "price": 10000,
+   "image": "/products/94.webp",
+   "specs": [
+    [
+     "Brand",
+     "Space"
+    ],
+    [
+     "Model",
+     "SP-30"
+    ],
+    [
+     "Category",
+     "Power Banks"
+    ]
+   ]
+  },
+  {
+   "posId": 96,
+   "slug": "blucks-mobile-holder-96",
+   "model": "Blucks",
+   "name": "Mobile holder",
+   "category": "accessories",
+   "tagline": "Protectors, holders, batteries and more",
+   "price": 1500,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Blucks"
+    ],
+    [
+     "Category",
+     "Accessories"
+    ]
+   ]
+  },
+  {
+   "posId": 98,
+   "slug": "dell-wireless-mouse-dell-98",
+   "model": "Dell",
+   "name": "Wireless Mouse Dell",
+   "category": "computer",
+   "tagline": "Mice, keyboards, USB drives and more",
+   "price": 800,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Dell"
+    ],
+    [
+     "Category",
+     "Computer"
+    ]
+   ]
+  },
+  {
+   "posId": 99,
+   "slug": "logitech-keyboard-wireless-media-k400-99",
+   "model": "Logitech",
+   "name": "Keyboard wireless Media (K400+)",
+   "category": "computer",
+   "tagline": "Mice, keyboards, USB drives and more",
+   "price": 9500,
+   "image": "/products/99.webp",
+   "specs": [
+    [
+     "Brand",
+     "Logitech"
+    ],
+    [
+     "Model",
+     "K400+"
+    ],
+    [
+     "Category",
+     "Computer"
+    ]
+   ]
+  },
+  {
+   "posId": 100,
+   "slug": "huizhi-dp-to-vga-converter-100",
+   "model": "HUIZHI",
+   "name": "Dp to vga converter",
+   "category": "computer",
+   "tagline": "Mice, keyboards, USB drives and more",
+   "price": 1000,
+   "image": "/products/100.webp",
+   "specs": [
+    [
+     "Brand",
+     "HUIZHI"
+    ],
+    [
+     "Category",
+     "Computer"
+    ]
+   ]
+  },
+  {
+   "posId": 101,
+   "slug": "logitech-wireless-mouse-m235-101",
+   "model": "Logitech",
+   "name": "Wireless mouse (M235)",
+   "category": "computer",
+   "tagline": "Mice, keyboards, USB drives and more",
+   "price": 7400,
+   "image": "/products/101.webp",
+   "specs": [
+    [
+     "Brand",
+     "Logitech"
+    ],
+    [
+     "Model",
+     "M235"
+    ],
+    [
+     "Category",
+     "Computer"
+    ]
+   ]
+  },
+  {
+   "posId": 102,
+   "slug": "dell-wired-keyboard-kb-218-102",
+   "model": "Dell",
+   "name": "Wired keyboard (KB-218)",
+   "category": "computer",
+   "tagline": "Mice, keyboards, USB drives and more",
+   "price": 2500,
+   "image": "/products/102.webp",
+   "specs": [
+    [
+     "Brand",
+     "Dell"
+    ],
+    [
+     "Model",
+     "KB-218"
+    ],
+    [
+     "Category",
+     "Computer"
+    ]
+   ]
+  },
+  {
+   "posId": 103,
+   "slug": "doomax-car-charger-doomax-qx03-103",
+   "model": "Doomax",
+   "name": "Car charger (DOOMAX-QX03)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 1200,
+   "image": "/products/103.webp",
+   "specs": [
+    [
+     "Brand",
+     "Doomax"
+    ],
+    [
+     "Model",
+     "DOOMAX-QX03"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 104,
+   "slug": "wireless-adapter-bt-104",
+   "model": "",
+   "name": "Wireless adapter BT",
+   "category": "computer",
+   "tagline": "Mice, keyboards, USB drives and more",
+   "price": 600,
+   "image": "/products/104.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Computer"
+    ]
+   ]
+  },
+  {
+   "posId": 105,
+   "slug": "itel-keypad-mobile-it2181-105",
+   "model": "Itel",
+   "name": "Keypad mobile (IT2181)",
+   "category": "mobiles",
+   "tagline": "Keypad phones",
+   "price": 3300,
+   "image": "/products/105.webp",
+   "specs": [
+    [
+     "Brand",
+     "Itel"
+    ],
+    [
+     "Model",
+     "IT2181"
+    ],
+    [
+     "Category",
+     "Mobile Phones"
+    ]
+   ]
+  },
+  {
+   "posId": 107,
+   "slug": "hp-keyboard-mouse-set-107",
+   "model": "Hp",
+   "name": "Keyboard mouse set",
+   "category": "computer",
+   "tagline": "Mice, keyboards, USB drives and more",
+   "price": 2800,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Hp"
+    ],
+    [
+     "Category",
+     "Computer"
+    ]
+   ]
+  },
+  {
+   "posId": 108,
+   "slug": "mousepad-mousepad-q-3-108",
+   "model": "Mousepad",
+   "name": "Mousepad (Q-3)",
+   "category": "computer",
+   "tagline": "Mice, keyboards, USB drives and more",
+   "price": 350,
+   "image": "/products/108.webp",
+   "specs": [
+    [
+     "Brand",
+     "Mousepad"
+    ],
+    [
+     "Model",
+     "Q-3"
+    ],
+    [
+     "Category",
+     "Computer"
+    ]
+   ]
+  },
+  {
+   "posId": 112,
+   "slug": "sovo-two-in-one-otg-sou-375-112",
+   "model": "Sovo",
+   "name": "Two in one otg (SOU-375)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 550,
+   "image": "/products/112.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SOU-375"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 117,
+   "slug": "sovo-fluch-c-c-sc312-117",
+   "model": "Sovo",
+   "name": "Fluch c-c (SC312)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 1200,
+   "image": "/products/117.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SC312"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 118,
+   "slug": "sovo-node-c-iphone-sc319-118",
+   "model": "Sovo",
+   "name": "Node C - iPhone (SC319)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 1000,
+   "image": "/products/118.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SC319"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 119,
+   "slug": "sovo-cord-c-c-sc308-119",
+   "model": "Sovo",
+   "name": "Cord c-c (SC308)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 800,
+   "image": "/products/119.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SC308"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 122,
+   "slug": "space-t2-earbuds-122",
+   "model": "Space",
+   "name": "T2 earbuds",
+   "category": "earbuds",
+   "tagline": "Wireless earbuds and neckbands",
+   "price": 6150,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Space"
+    ],
+    [
+     "Category",
+     "Earbuds & Neckbands"
+    ]
+   ]
+  },
+  {
+   "posId": 123,
+   "slug": "phone-stand-123",
+   "model": "",
+   "name": "Phone stand",
+   "category": "accessories",
+   "tagline": "Protectors, holders, batteries and more",
+   "price": 650,
+   "image": "/products/123.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Accessories"
+    ]
+   ]
+  },
+  {
+   "posId": 124,
+   "slug": "keyboard-lot-124",
+   "model": "",
+   "name": "Keyboard Lot",
+   "category": "computer",
+   "tagline": "Mice, keyboards, USB drives and more",
+   "price": 1500,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Computer"
+    ]
+   ]
+  },
+  {
+   "posId": 125,
+   "slug": "sovo-gear-usb-lightning-sc-011-125",
+   "model": "Sovo",
+   "name": "Gear usb lightning (SC 011)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 650,
+   "image": "/products/125.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SC 011"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 127,
+   "slug": "sovo-typ-c-2-in-1-cable-shc-315-127",
+   "model": "Sovo",
+   "name": "Typ C 2 in 1 cable (SHC-315)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 650,
+   "image": "/products/127.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SHC-315"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 129,
+   "slug": "doomax-clip-charger-dc-02-129",
+   "model": "Doomax",
+   "name": "Clip charger (DC-02)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 650,
+   "image": "/products/129.webp",
+   "specs": [
+    [
+     "Brand",
+     "Doomax"
+    ],
+    [
+     "Model",
+     "DC-02"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 130,
+   "slug": "otg-130",
+   "model": "",
+   "name": "OTG",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 150,
+   "image": null,
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 132,
+   "slug": "dell-dell-65w-charger-org-132",
+   "model": "Dell",
+   "name": "Dell 65W charger org",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 3800,
+   "image": "/products/132.webp",
+   "specs": [
+    [
+     "Brand",
+     "Dell"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 133,
+   "slug": "dell-dell-65w-type-c-org-133",
+   "model": "Dell",
+   "name": "Dell 65W type-C org",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 5000,
+   "image": "/products/133.webp",
+   "specs": [
+    [
+     "Brand",
+     "Dell"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 134,
+   "slug": "lenovo-lenovo-charger-usb-type-134",
+   "model": "Lenovo",
+   "name": "Lenovo charger USB type",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 2500,
+   "image": "/products/134.webp",
+   "specs": [
+    [
+     "Brand",
+     "Lenovo"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 136,
+   "slug": "laxasfit-t800-ultra-watch-136",
+   "model": "Laxasfit",
+   "name": "T800 ULTRA WATCH",
+   "category": "smart-watches",
+   "tagline": "Fitness and calling watches",
+   "price": 2700,
+   "image": "/products/136.webp",
+   "specs": [
+    [
+     "Brand",
+     "Laxasfit"
+    ],
+    [
+     "Category",
+     "Smart Watches"
+    ]
+   ]
+  },
+  {
+   "posId": 137,
+   "slug": "german-semi-automatic-holder-gr-02-137",
+   "model": "German",
+   "name": "Semi automatic holder (GR-02)",
+   "category": "accessories",
+   "tagline": "Protectors, holders, batteries and more",
+   "price": 1500,
+   "image": "/products/137.webp",
+   "specs": [
+    [
+     "Brand",
+     "German"
+    ],
+    [
+     "Model",
+     "GR-02"
+    ],
+    [
+     "Category",
+     "Accessories"
+    ]
+   ]
+  },
+  {
+   "posId": 142,
+   "slug": "hkt-bl-5c-142",
+   "model": "HKT",
+   "name": "Bl-5c",
+   "category": "accessories",
+   "tagline": "Protectors, holders, batteries and more",
+   "price": 500,
+   "image": "/products/142.webp",
+   "specs": [
+    [
+     "Brand",
+     "HKT"
+    ],
+    [
+     "Category",
+     "Accessories"
+    ]
+   ]
+  },
+  {
+   "posId": 143,
+   "slug": "mm2-bl-5c-143",
+   "model": "MM2",
+   "name": "Bl-5c",
+   "category": "accessories",
+   "tagline": "Protectors, holders, batteries and more",
+   "price": 350,
+   "image": "/products/143.webp",
+   "specs": [
+    [
+     "Brand",
+     "MM2"
+    ],
+    [
+     "Category",
+     "Accessories"
+    ]
+   ]
+  },
+  {
+   "posId": 144,
+   "slug": "thmubs-144",
+   "model": "",
+   "name": "Thmubs",
+   "category": "accessories",
+   "tagline": "Protectors, holders, batteries and more",
+   "price": 150,
+   "image": "/products/144.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Accessories"
+    ]
+   ]
+  },
+  {
+   "posId": 145,
+   "slug": "thumbs-145",
+   "model": "",
+   "name": "Thumbs",
+   "category": "accessories",
+   "tagline": "Protectors, holders, batteries and more",
+   "price": 100,
+   "image": "/products/145.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Accessories"
+    ]
+   ]
+  },
+  {
+   "posId": 146,
+   "slug": "sovo-orbit-earbuds-sbt-950-146",
+   "model": "Sovo",
+   "name": "Orbit earbuds (SBT-950)",
+   "category": "earbuds",
+   "tagline": "Wireless earbuds and neckbands",
+   "price": 5800,
+   "image": "/products/146.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SBT-950"
+    ],
+    [
+     "Category",
+     "Earbuds & Neckbands"
+    ]
+   ]
+  },
+  {
+   "posId": 147,
+   "slug": "sovo-runner-sbt-960-147",
+   "model": "Sovo",
+   "name": "Runner (SBT-960)",
+   "category": "earbuds",
+   "tagline": "Wireless earbuds and neckbands",
+   "price": 4500,
+   "image": "/products/147.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SBT-960"
+    ],
+    [
+     "Category",
+     "Earbuds & Neckbands"
+    ]
+   ]
+  },
+  {
+   "posId": 148,
+   "slug": "dell-wired-mouse-ms116-148",
+   "model": "Dell",
+   "name": "Wired mouse (MS116)",
+   "category": "computer",
+   "tagline": "Mice, keyboards, USB drives and more",
+   "price": 800,
+   "image": "/products/148.webp",
+   "specs": [
+    [
+     "Brand",
+     "Dell"
+    ],
+    [
+     "Model",
+     "MS116"
+    ],
+    [
+     "Category",
+     "Computer"
+    ]
+   ]
+  },
+  {
+   "posId": 150,
+   "slug": "sovo-joint-pd-c-lightning-sc-318-150",
+   "model": "Sovo",
+   "name": "Joint PD c-lightning (SC-318)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 1000,
+   "image": "/products/150.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SC-318"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 154,
+   "slug": "toocki-c-to-lightning-154",
+   "model": "Toocki",
+   "name": "C to lightning",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 1200,
+   "image": "/products/154.webp",
+   "specs": [
+    [
+     "Brand",
+     "Toocki"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 155,
+   "slug": "toocki-c-to-c-155",
+   "model": "Toocki",
+   "name": "C to C",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 800,
+   "image": "/products/155.webp",
+   "specs": [
+    [
+     "Brand",
+     "Toocki"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 158,
+   "slug": "hp-hp-bluetooth-wireless-mouse-w2-c-158",
+   "model": "Hp",
+   "name": "Hp bluetooth & wireless mouse (W2 C)",
+   "category": "computer",
+   "tagline": "Mice, keyboards, USB drives and more",
+   "price": 1050,
+   "image": "/products/158.webp",
+   "specs": [
+    [
+     "Brand",
+     "Hp"
+    ],
+    [
+     "Model",
+     "W2 C"
+    ],
+    [
+     "Category",
+     "Computer"
+    ]
+   ]
+  },
+  {
+   "posId": 159,
+   "slug": "sovo-energy-series-12w-sf-scr-419-159",
+   "model": "Sovo",
+   "name": "Energy series 12w SF (SCR-419)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 800,
+   "image": "/products/159.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SCR-419"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 160,
+   "slug": "sovo-type-c-strong-series-3a-sc-004-160",
+   "model": "Sovo",
+   "name": "Type C Strong series 3A (SC-004)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 650,
+   "image": "/products/160.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SC-004"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 161,
+   "slug": "sovo-micro-strong-series-sc-004-161",
+   "model": "Sovo",
+   "name": "Micro strong series (SC-004)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 500,
+   "image": "/products/161.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SC-004"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 162,
+   "slug": "sovo-type-c-active-series-100w-sc-007-162",
+   "model": "Sovo",
+   "name": "Type C active series 100w (SC-007)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 850,
+   "image": "/products/162.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SC-007"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 163,
+   "slug": "sovo-type-c-force-series-3-4a-sc-006-163",
+   "model": "Sovo",
+   "name": "Type C force series 3.4A (SC-006)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 800,
+   "image": "/products/163.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SC-006"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 164,
+   "slug": "sovo-car-charger-target-series-scr-460-164",
+   "model": "Sovo",
+   "name": "Car charger Target series (SCR-460)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 2300,
+   "image": "/products/164.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SCR-460"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 165,
+   "slug": "sovo-type-c-prime-series-sc-005-165",
+   "model": "Sovo",
+   "name": "Type C prime series (SC-005)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 600,
+   "image": "/products/165.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SC-005"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 166,
+   "slug": "hdmi-3-mtr-166",
+   "model": "",
+   "name": "Hdmi 3 MTr",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 950,
+   "image": "/products/166.webp",
+   "specs": [
+    [
+     "Brand",
+     "Generic"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 167,
+   "slug": "doomax-type-c-lightning-dx-ce04-167",
+   "model": "Doomax",
+   "name": "Type C - lightning (DX-CE04)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 1050,
+   "image": "/products/167.webp",
+   "specs": [
+    [
+     "Brand",
+     "Doomax"
+    ],
+    [
+     "Model",
+     "DX-CE04"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 168,
+   "slug": "doomax-car-charger-pd-pl-01-168",
+   "model": "Doomax",
+   "name": "Car charger PD (PL-01)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 1250,
+   "image": "/products/168.webp",
+   "specs": [
+    [
+     "Brand",
+     "Doomax"
+    ],
+    [
+     "Model",
+     "PL-01"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 169,
+   "slug": "doomax-car-charger-2-4-dl01-169",
+   "model": "Doomax",
+   "name": "Car charger 2.4 (DL01)",
+   "category": "chargers",
+   "tagline": "Wall, car and laptop chargers",
+   "price": 1000,
+   "image": "/products/169.webp",
+   "specs": [
+    [
+     "Brand",
+     "Doomax"
+    ],
+    [
+     "Model",
+     "DL01"
+    ],
+    [
+     "Category",
+     "Chargers"
+    ]
+   ]
+  },
+  {
+   "posId": 170,
+   "slug": "membrane-jelly-sheet-170",
+   "model": "Membrane",
+   "name": "Jelly sheet",
+   "category": "accessories",
+   "tagline": "Protectors, holders, batteries and more",
+   "price": 500,
+   "image": "/products/170.webp",
+   "specs": [
+    [
+     "Brand",
+     "Membrane"
+    ],
+    [
+     "Category",
+     "Accessories"
+    ]
+   ]
+  },
+  {
+   "posId": 171,
+   "slug": "jelly-360-jelly-171",
+   "model": "Jelly",
+   "name": "360 jelly",
+   "category": "accessories",
+   "tagline": "Protectors, holders, batteries and more",
+   "price": 500,
+   "image": "/products/171.webp",
+   "specs": [
+    [
+     "Brand",
+     "Jelly"
+    ],
+    [
+     "Category",
+     "Accessories"
+    ]
+   ]
+  },
+  {
+   "posId": 174,
+   "slug": "itel-keypad-muzik-450-174",
+   "model": "Itel",
+   "name": "Keypad (MUZIK 450)",
+   "category": "mobiles",
+   "tagline": "Keypad phones",
+   "price": 4500,
+   "image": "/products/174.webp",
+   "specs": [
+    [
+     "Brand",
+     "Itel"
+    ],
+    [
+     "Model",
+     "MUZIK 450"
+    ],
+    [
+     "Category",
+     "Mobile Phones"
+    ]
+   ]
+  },
+  {
+   "posId": 178,
+   "slug": "sovo-wireless-microphone-omix-series-swm-578-178",
+   "model": "Sovo",
+   "name": "Wireless microphone omix series (SWM-578)",
+   "category": "audio",
+   "tagline": "Speakers and wireless microphones",
+   "price": 12000,
+   "image": "/products/178.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SWM-578"
+    ],
+    [
+     "Category",
+     "Speakers & Mics"
+    ]
+   ]
+  },
+  {
+   "posId": 179,
+   "slug": "sovo-wireless-microphone-volo-swm-555-179",
+   "model": "Sovo",
+   "name": "Wireless microphone volo (SWM-555)",
+   "category": "audio",
+   "tagline": "Speakers and wireless microphones",
+   "price": 6500,
+   "image": "/products/179.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SWM-555"
+    ],
+    [
+     "Category",
+     "Speakers & Mics"
+    ]
+   ]
+  },
+  {
+   "posId": 181,
+   "slug": "sovo-audio-cable-sox-090-181",
+   "model": "Sovo",
+   "name": "Audio cable (SOX-090)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 550,
+   "image": "/products/181.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SOX-090"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 182,
+   "slug": "sovo-4-in-1-four-fold-series-sc-114-182",
+   "model": "Sovo",
+   "name": "4 in 1 four-fold series (SC-114)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 1500,
+   "image": "/products/182.webp",
+   "specs": [
+    [
+     "Brand",
+     "Sovo"
+    ],
+    [
+     "Model",
+     "SC-114"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 183,
+   "slug": "j-cell-4-in-1-120w-blast-j-406-183",
+   "model": "J-cell",
+   "name": "4 in 1 120w blast (J-406)",
+   "category": "cables",
+   "tagline": "Charging, audio and display cables",
+   "price": 1000,
+   "image": "/products/183.webp",
+   "specs": [
+    [
+     "Brand",
+     "J-cell"
+    ],
+    [
+     "Model",
+     "J-406"
+    ],
+    [
+     "Category",
+     "Cables"
+    ]
+   ]
+  },
+  {
+   "posId": 184,
+   "slug": "itel-keypad-mobile-it2210-184",
+   "model": "Itel",
+   "name": "Keypad mobile (IT2210)",
+   "category": "mobiles",
+   "tagline": "Keypad phones",
+   "price": 3500,
+   "image": "/products/184.webp",
+   "specs": [
+    [
+     "Brand",
+     "Itel"
+    ],
+    [
+     "Model",
+     "IT2210"
+    ],
+    [
+     "Category",
+     "Mobile Phones"
+    ]
+   ]
+  },
+  {
+   "posId": 185,
+   "slug": "itel-keypad-phone-it2165-185",
+   "model": "Itel",
+   "name": "Keypad phone (IT2165)",
+   "category": "mobiles",
+   "tagline": "Keypad phones",
+   "price": 3200,
+   "image": "/products/185.webp",
+   "specs": [
+    [
+     "Brand",
+     "Itel"
+    ],
+    [
+     "Model",
+     "IT2165"
+    ],
+    [
+     "Category",
+     "Mobile Phones"
+    ]
+   ]
+  }
+ ]
+}

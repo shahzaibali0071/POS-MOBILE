@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/space-grotesk";
+
+@theme {
+  --color-ink: #111113;
+  --color-muted: #6b6b73;
+  --color-tile: #eeeef1;
+  --color-paper: #f7f7f8;
+  --color-accent: #e5482b;
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk Variable", "Inter Variable", ui-sans-serif, sans-serif;
+}
+
+html {
+  scroll-padding-top: 120px;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  overflow-x: clip;
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 text-sm font-semibold transition
+      focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .wrap {
+    @apply mx-auto w-full max-w-[1280px] px-4 sm:px-6;
+  }
+  .field {
+    @apply min-h-11 w-full rounded-xl border border-black/15 bg-white px-3.5 text-base outline-none transition
+      focus:border-ink focus:ring-2 focus:ring-ink/10;
+  }
+}
+
+.art {
+  filter: drop-shadow(0 10px 14px rgb(0 0 0 / 0.14));
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0s !important;
+  }
+}
