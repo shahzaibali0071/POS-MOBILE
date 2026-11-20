@@ -15,7 +15,20 @@ const MAX_BYTES = 5_000_000;
 const MAX_PAGES = 20; // 250 products per page
 const TYPES: Record<string, string> = { "image/png": "png", "image/jpeg": "jpg", "image/webp": "webp", "image/avif": "avif" };
 const readJson = async <T,>(p: string) => JSON.parse(await readFile(p, "utf8")) as T;
-const get = (url: string) => fetch(url, { signal: AbortSignal.timeout(20_000), headers: { "User-Agent": "Mozilla/5.0" } });
+const HEADERS = {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36",
+  Accept: "image/avif,image/webp,image/png,image/*;q=0.8,*/*;q=0.5",
+};
+const get = (url: string) => fetch(url, { signal: AbortSignal.timeout(20_000), headers: HEADERS });
+
+/**
+ * cdn.shopify.com refuses some server downloads (HTTP 403), but every Shopify store also
+ * serves its files from its own domain at /cdn/shop/files/<name>, so try those too.
+ */
+function candidates(url: string, sites: string[]): string[] {
+  const m = /^https:\/\/cdn\.shopify\.com\/s\/files\/[\d/]+\/files\/(.+)$/.exec(url);
+  return m ? [url, ...sites.map((site) => `${site}/cdn/shop/files/${m[1]}`)] : [url];
+}
 
 async function brandCatalog({ site }: Source): Promise<BrandProduct[]> {
   const out: BrandProduct[] = [];
@@ -36,7 +49,19 @@ async function brandCatalog({ site }: Source): Promise<BrandProduct[]> {
   return out;
 }
 
-async function download(id: string, url: string): Promise<string> {
+async function download(id: string, url: string, sites: string[]): Promise<string> {
+  let lastError = new Error("no URL");
+  for (const u of candidates(url, sites)) {
+    try {
+      return await save(id, u);
+    } catch (err) {
+      lastError = err as Error;
+    }
+  }
+  throw lastError;
+}
+
+async function save(id: string, url: string): Promise<string> {
   const res = await get(url);
   const type = (res.headers.get("content-type") ?? "").split(";")[0].trim();
   if (!res.ok || !TYPES[type]) throw new Error(`HTTP ${res.status} ${type}`);
@@ -85,7 +110,7 @@ const report: Record<string, string> = {};
 await Promise.all(
   Object.entries(chosen).map(async ([id, { url, how }]) => {
     try {
-      manifest[id] = await download(id, url);
+      manifest[id] = await download(id, url, sources.map((s) => s.site));
       report[id] = how;
     } catch (err) {
       console.warn(`official image ${id}: ${(err as Error).message}; keeping shop photo`);
