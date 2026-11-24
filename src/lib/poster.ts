@@ -233,8 +233,9 @@ export function cutOut(img: CanvasImageSource & { width: number; height: number 
   const mask = dropSpecks(alphaMask(data.data) ?? backgroundMask(data.data, w, h, tol), w, h);
   const share = mask.reduce((a, v) => a + v, 0) / mask.length;
   const box = productBox(mask, w, h);
-  // Almost nothing or almost everything removed means the background wasn't plain.
-  if (!box || share < 0.04 || share > 0.97) return { canvas: c, removed: false };
+  // Almost nothing removed means the background wasn't plain; a product that is only a few
+  // pixels is noise. A small product on a big plain background is fine: it gets cropped and enlarged.
+  if (!box || share < 0.04 || box.w * box.h < w * h * 0.002) return { canvas: c, removed: false };
   for (let i = 0; i < mask.length; i++) {
     if (mask[i]) data.data[i * 4 + 3] = 0;
     else if (data.data[i * 4 + 3] === 255) {
