@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
-import { backgroundMask, dropSpecks, fitSize, productBox, wrap } from "./poster";
+import { alphaMask, backgroundMask, dropSpecks, fitSize, productBox, wrap } from "./poster";
 
 /** 10x10 white image with a dark 4x4 square at (3,3) and a white "hole" pixel inside it. */
 function sample() {
@@ -48,4 +48,13 @@ test("large enclosed background gaps are removed", () => {
   const mask = backgroundMask(px, w, h, 30);
   assert.equal(mask[20 * w + 20], 1, "gap inside the ring is background");
   assert.equal(mask[7 * w + 7], 0, "ring is product");
+});
+
+test("transparent PNGs use their alpha channel, opaque photos do not", () => {
+  const w = 20, h = 20, px = new Uint8ClampedArray(w * h * 4); // fully transparent black
+  for (let y = 5; y < 15; y++) for (let x = 5; x < 15; x++) px.set([15, 15, 15, 255], (y * w + x) * 4); // dark product
+  const mask = alphaMask(px)!;
+  assert.equal(mask[0], 1);
+  assert.equal(mask[10 * w + 10], 0, "dark product survives");
+  assert.equal(alphaMask(new Uint8ClampedArray(16).fill(255)), null);
 });

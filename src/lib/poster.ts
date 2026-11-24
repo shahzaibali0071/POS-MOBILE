@@ -130,6 +130,18 @@ export function backgroundMask(rgba: Uint8ClampedArray, w: number, h: number, to
 }
 
 /**
+ * For photos that already have a transparent background (most official brand PNGs):
+ * returns a mask from the alpha channel, or null when the photo is essentially opaque.
+ */
+export function alphaMask(rgba: Uint8ClampedArray): Uint8Array | null {
+  const n = rgba.length / 4;
+  const mask = new Uint8Array(n);
+  let clear = 0;
+  for (let i = 0; i < n; i++) if (rgba[i * 4 + 3] < 128) { mask[i] = 1; clear++; }
+  return clear / n > 0.03 ? mask : null;
+}
+
+/**
  * Drops specks the background pass left behind: product-pixel islands smaller than 2% of the
  * biggest island become background. Edits `mask` in place and returns it.
  */
@@ -217,14 +229,15 @@ export function cutOut(img: CanvasImageSource & { width: number; height: number 
   if (!enabled) return { canvas: c, removed: false };
 
   const data = ctx.getImageData(0, 0, w, h);
-  const mask = dropSpecks(backgroundMask(data.data, w, h, tol), w, h);
+  // Transparent PNGs already carry their cut-out; colour-matching them would eat a dark product.
+  const mask = dropSpecks(alphaMask(data.data) ?? backgroundMask(data.data, w, h, tol), w, h);
   const share = mask.reduce((a, v) => a + v, 0) / mask.length;
   const box = productBox(mask, w, h);
   // Almost nothing or almost everything removed means the background wasn't plain.
   if (!box || share < 0.04 || share > 0.97) return { canvas: c, removed: false };
   for (let i = 0; i < mask.length; i++) {
     if (mask[i]) data.data[i * 4 + 3] = 0;
-    else {
+    else if (data.data[i * 4 + 3] === 255) {
       // soften the outline: product pixels touching the background get half alpha
       const x = i % w;
       if ((x > 0 && mask[i - 1]) || (x < w - 1 && mask[i + 1]) || mask[i - w] || mask[i + w]) data.data[i * 4 + 3] = 150;
