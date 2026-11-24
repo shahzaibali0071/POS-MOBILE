@@ -6,13 +6,14 @@ import { approveDraft, deletePhoto, generateAngles, importPhoto, logout, uploadP
 import { AI_ANGLES, AI_COST_USD_PER_IMAGE } from "@/lib/ai-angles";
 import { DEFAULT_EDIT, DEFAULT_VARIANTS, encode, loadSource, renderVariant, toneSource, VARIANTS, type Edit, type Source } from "@/lib/photo-edit";
 import { PhotoCard } from "./PhotoCard";
+import { PosterMaker } from "./PosterMaker";
 
 const MAX_PHOTOS = 3;
 
 type Item = { id: string; source: Source; edit: Edit };
 type Note = { ok: boolean; text: string };
 type Props = {
-  products: { id: string; label: string }[];
+  products: { id: string; label: string; name: string; model: string; category: string; price: string; oldPrice: string; image: string }[];
   published: Record<string, string[]>;
   drafts: Record<string, string[]>;
   blobReady: boolean;
@@ -28,6 +29,8 @@ export function PhotoStudio({ products, published, drafts, blobReady }: Props) {
   const [status, setStatus] = useState("");
   const [notes, setNotes] = useState<Note[]>([]);
   const [importUrl, setImportUrl] = useState("");
+  const [posterOpen, setPosterOpen] = useState(false);
+  const current = products.find((p) => p.id === pid);
 
   const photos = published[pid] ?? [];
   const pending = drafts[pid] ?? [];
@@ -255,6 +258,24 @@ export function PhotoStudio({ products, published, drafts, blobReady }: Props) {
           </div>
           <PhotoGrid urls={pending} busy={busy} actions={[{ label: "Publish", onClick: (u) => approve([u]) }, { label: "Delete", danger: true, onClick: remove }]} />
         </section>
+      )}
+
+      {current && (
+        <details className="rounded-2xl bg-white p-4 ring-1 ring-black/5" open={posterOpen} onToggle={(e) => setPosterOpen(e.currentTarget.open)}>
+          <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between font-display text-xl font-bold [&::-webkit-details-marker]:hidden">
+            Make a sale poster
+            <span className="text-sm font-normal text-muted">{posterOpen ? "Close" : "Open"}</span>
+          </summary>
+          {posterOpen && (
+            <div className="mt-4">
+              <PosterMaker
+                key={pid}
+                product={{ ...current, photos: [...photos, current.image].filter(Boolean) }}
+                onSaved={() => router.refresh()}
+              />
+            </div>
+          )}
+        </details>
       )}
 
       <section className="rounded-2xl bg-white p-4 ring-1 ring-black/5">

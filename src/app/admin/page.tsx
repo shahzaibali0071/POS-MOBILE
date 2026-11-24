@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { list } from "@vercel/blob";
 import { connection } from "next/server";
-import { products } from "@/lib/catalog";
+import { formatPrice, products } from "@/lib/catalog";
 import { adminConfigured, isAdmin } from "@/lib/admin-auth";
 import { getProductImages, type ImageMap } from "@/lib/product-images";
 import { LoginForm } from "@/components/admin/LoginForm";
@@ -38,7 +38,16 @@ async function AdminGate() {
     <PhotoStudio
       products={[...products]
         .sort((a, b) => `${a.model} ${a.name}`.localeCompare(`${b.model} ${b.name}`))
-        .map((p) => ({ id: String(p.posId), label: `${p.model} ${p.name}`.trim() }))}
+        .map((p) => ({
+          id: String(p.posId),
+          label: `${p.model} ${p.name}`.trim(),
+          name: p.name,
+          model: p.model,
+          category: p.category,
+          price: formatPrice(p.price),
+          oldPrice: p.compareAt ? formatPrice(p.compareAt) : "",
+          image: p.image ?? "",
+        }))}
       published={published}
       drafts={drafts}
       blobReady={blobReady}

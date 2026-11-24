@@ -57,3 +57,10 @@ The catalog comes from the shop's POS:
 - Optional AI angles (Vercel AI Gateway, `bfl/flux-kontext-pro`) land in `drafts/` until approved.
 - Photos are served by `/api/photos/...` (the Blob store is private). Studio photos win over
   official and shop photos; changes show immediately, no rebuild needed.
+
+## Poster Maker (`/admin` → Make a sale poster)
+
+- Pick a product photo (or a new one), a style (Neon, Fire, Clean, Voltix black), edit the title,
+  ribbon, features, price and badges, then Share/Download or add it to the product's photos.
+- Plain backgrounds are cut out in the browser (free). For busy photos use "AI clean background";
+  "AI scene background" places the product in a styled scene (each ~$0.04 in AI Gateway credits).

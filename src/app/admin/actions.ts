@@ -156,3 +156,42 @@ export async function deletePhoto(url: string): Promise<ActionResult> {
     return fail("Could not delete that photo. Try again.");
   }
 }
+
+const SCENES: Record<string, string> = {
+  white: "WHITE",
+  neon: "a dark gaming desk at night with glowing RGB neon lights in blue and purple, a blurred RGB keyboard behind it",
+  fire: "a dark studio with dramatic orange and red rim lighting and glowing embers",
+  clean: "a bright minimal white studio with soft daylight and a light grey podium",
+  brand: "a sleek black studio with a single warm orange spotlight and a glossy black podium",
+};
+
+/**
+ * AI background for Poster Maker: puts the real product into a styled scene on the right,
+ * leaving the left side dark for the poster text. Returns the image directly (not stored).
+ */
+export async function posterScene(form: FormData): Promise<{ ok: true; dataUrl: string } | { ok: false; error: string }> {
+  if (!(await isAdmin())) return { ok: false, error: "Your session expired. Please log in again." };
+  const file = form.get("file");
+  const style = String(form.get("style") ?? "neon");
+  if (!(file instanceof File) || file.size === 0 || file.size > MAX_UPLOAD_BYTES) return { ok: false, error: "Photo missing or larger than 4 MB." };
+  const bytes = new Uint8Array(await file.arrayBuffer());
+  if (!sniffImage(bytes)) return { ok: false, error: "That file is not a JPG, PNG or WebP image." };
+  try {
+    const { image } = await generateImage({
+      model: gateway.imageModel(AI_MODEL),
+      prompt: {
+        images: [bytes],
+        text:
+          style === "white"
+            ? "Product photo cut-out: show this exact product alone, centred, on a pure white (#FFFFFF) seamless background with no shadow, no reflection and no other objects. Keep the exact same product: identical shape, colours, packaging, buttons, logo and text."
+            : `Professional advertising photo: place this exact product large on the right half of the frame, in ${SCENES[style] ?? SCENES.neon}. Keep the left half of the image simple and darker for text. No text, no letters, no logos added. Keep the exact same product: identical shape, colours, buttons, logo and details.`,
+      },
+      aspectRatio: "1:1",
+      abortSignal: AbortSignal.timeout(90_000),
+    });
+    return { ok: true, dataUrl: `data:${image.mediaType ?? "image/png"};base64,${image.base64}` };
+  } catch (err) {
+    console.error("posterScene failed", err);
+    return { ok: false, error: "AI could not make the scene right now. Check AI Gateway credits in Vercel, then try again." };
+  }
+}
