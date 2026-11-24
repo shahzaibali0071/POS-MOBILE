@@ -5,6 +5,7 @@ import { useState } from "react";
 import { discountPct, formatPrice, FREE_SHIPPING_MIN, type Product } from "@/lib/catalog";
 import { useCart } from "@/lib/cart";
 import { ProductImage } from "./ProductImage";
+import { useProductImages } from "@/lib/images-context";
 import { Stars } from "./Stars";
 import { QtyStepper } from "./CartLines";
 import { Icon } from "./Icon";
@@ -16,6 +17,8 @@ export function ProductBuyBox({ product: p }: { product: Product }) {
   const [color, setColor] = useState(p.colors[0]);
   const [qty, setQty] = useState(1);
   const off = discountPct(p);
+  const gallery = useProductImages(p.posId);
+  const [photo, setPhoto] = useState(0);
 
   const add = () => dispatch({ type: "add", slug: p.slug, color: color.name, qty });
 
@@ -23,9 +26,25 @@ export function ProductBuyBox({ product: p }: { product: Product }) {
     <div className="mt-4 grid gap-8 lg:grid-cols-2 lg:gap-12">
       <div>
         <div className="relative grid aspect-square place-items-center overflow-hidden rounded-3xl bg-tile">
-          <ProductImage product={p} className="art h-4/5 w-4/5" />
+          <ProductImage product={p} index={photo} className="art h-4/5 w-4/5" />
           {p.badge && <span className="absolute left-4 top-4 rounded-full bg-ink px-3 py-1 text-xs font-semibold text-white">{p.badge}</span>}
         </div>
+        {gallery.length > 1 && (
+          <div className="mt-3 flex gap-3 overflow-x-auto pb-1">
+            {gallery.map((src, i) => (
+              <button
+                key={src}
+                type="button"
+                onClick={() => setPhoto(i)}
+                aria-label={`Photo ${i + 1} of ${gallery.length}`}
+                aria-pressed={photo === i}
+                className={`grid h-20 w-20 flex-none place-items-center overflow-hidden rounded-xl bg-tile ring-2 transition ${photo === i ? "ring-ink" : "ring-transparent hover:ring-black/20"}`}
+              >
+                <ProductImage product={p} index={i} className="h-full w-full" label={`Photo ${i + 1}`} />
+              </button>
+            ))}
+          </div>
+        )}
       </div>
 
       <div className="lg:pt-4">

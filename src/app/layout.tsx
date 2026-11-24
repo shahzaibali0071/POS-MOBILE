@@ -4,6 +4,8 @@ import { CartProvider } from "@/lib/cart";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CartDrawer } from "@/components/CartDrawer";
+import { ImagesProvider } from "@/lib/images-context";
+import { getProductImages } from "@/lib/product-images";
 
 export const metadata: Metadata = {
   title: { default: "Voltix | Smart Wearables and Tech Accessories", template: "%s | Voltix" },
@@ -12,10 +14,12 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { themeColor: "#111113" };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default async function RootLayout({ children }: LayoutProps<"/">) {
+  const images = await getProductImages();
   return (
     <html lang="en" className="h-full antialiased">
       <body className="flex min-h-full flex-col">
+        <ImagesProvider images={images}>
         <CartProvider>
           <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-white focus:px-4 focus:py-2">
             Skip to content
@@ -25,6 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Footer />
           <CartDrawer />
         </CartProvider>
+        </ImagesProvider>
       </body>
     </html>
   );

@@ -83,7 +83,10 @@ export const products: Product[] = data.products.map(toProduct);
 const bySlug = new Map(products.map((p) => [p.slug, p]));
 const catBySlug = new Map(categories.map((c) => [c.slug, c]));
 
+const byPosId = new Map(products.map((p) => [p.posId, p]));
+
 export const getProduct = (slug: string) => bySlug.get(slug);
+export const getProductByPosId = (posId: number) => byPosId.get(posId);
 export const getCategory = (slug: string) => catBySlug.get(slug);
 export const productsIn = (category: string) => products.filter((p) => p.category === category);
 export const productsTagged = (tag: Product["tags"][number]) => products.filter((p) => p.tags.includes(tag));

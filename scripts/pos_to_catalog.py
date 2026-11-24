@@ -1,6 +1,6 @@
 """Builds src/data/products.json from the ALI MOBILE POS database.
 
-Run: python scripts/pos_to_catalog.py <mobile_pos.db> <photos_dir>
+Run: python scripts/pos_to_catalog.py <mobile_pos.db | pos-rows.json> <photos_dir>
 Only in-stock items with a selling price go online. Cost prices and stock
 counts never leave the shop. Replica ("copy") items are not listed online.
 """
@@ -48,11 +48,22 @@ def clean(s):
 def slugify(s):
     return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
 
-def main(db_path, photos_dir):
+FIELDS = ("id", "name", "brand_name", "model", "category", "sale_price", "stock_qty")
+
+def rows_from_db(db_path):
     db = sqlite3.connect(db_path); db.row_factory = sqlite3.Row
     sold = {r[0]: r[1] for r in db.execute("SELECT product_id, SUM(qty) FROM sale_items GROUP BY product_id")}
-    rows = db.execute("SELECT id, name, brand_name, model, category, sale_price, stock_qty FROM products "
-                      "WHERE stock_qty > 0 AND sale_price > 0 ORDER BY id").fetchall()
+    rows = [dict(r) for r in db.execute(f"SELECT {', '.join(FIELDS)} FROM products ORDER BY id")]
+    return rows, sold
+
+def rows_from_json(path):
+    """Rows the POS pushed to the website (PUT /api/pos/products): same columns plus sold_qty."""
+    rows = json.load(open(path))["products"]
+    return rows, {r["id"]: r.get("sold_qty") or 0 for r in rows}
+
+def main(source, photos_dir):
+    rows, sold = rows_from_json(source) if source.endswith(".json") else rows_from_db(source)
+    rows = sorted((r for r in rows if (r["stock_qty"] or 0) > 0 and (r["sale_price"] or 0) > 0), key=lambda r: r["id"])
     photos = Path(photos_dir)
     out = []
     for r in rows:
@@ -62,7 +73,7 @@ def main(db_path, photos_dir):
         brand, model = clean(r["brand_name"]), clean(r["model"])
         if model.lower() == brand.lower() or model.lower() in (r["name"] or "").lower():
             model = ""
-        name = clean(r["name"]) or r["name"].strip()
+        name = clean(r["name"]) or (r["name"] or "").strip()
         name = name[:1].upper() + name[1:]
         title = f"{name} ({model.upper()})" if model else name
         cat = category_for(r["category"], r["name"])
